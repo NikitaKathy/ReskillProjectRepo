@@ -8,7 +8,5 @@ public class OrderMsApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(OrderMsApplication.class, args);
-		//Added by Nikita
 	}
-
 }
