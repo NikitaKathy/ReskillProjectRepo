@@ -6,7 +6,6 @@ import com.oms.user.entity.Wishlist;
 import com.oms.user.utility.CustomPK;
 
 
-
 public interface WishlistRepository extends CrudRepository<Wishlist, CustomPK> {
 
 }

@@ -52,6 +52,19 @@ public class ProductAPI {
 		}
 	}
 	
+	@GetMapping(value = "/getById/{id}")
+	public ResponseEntity<ProductDTO> getByProductId(@PathVariable String id)
+	{
+		try {
+			ProductDTO productDTO = productService.getProductById(id);
+			return new ResponseEntity<ProductDTO>(productDTO,HttpStatus.OK);
+		}
+		catch(Exception e)
+		{
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage(), e);
+		}
+	}
+	
 	@GetMapping(value = "/getByCategory/{name}")
 	public ResponseEntity<List<ProductDTO>> getByProductCategory(@PathVariable String name)
 	{

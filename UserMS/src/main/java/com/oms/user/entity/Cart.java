@@ -11,14 +11,24 @@ import com.oms.user.utility.CustomPK;
 public class Cart {
 	
 	@EmbeddedId
-	private CustomPK customId;
+	private CustomPK customPK;
+	
+	private Integer quantity;
 
-	public CustomPK getCustomId() {
-		return customId;
+	public Integer getQuantity() {
+		return quantity;
 	}
 
-	public void setCustomId(CustomPK customId) {
-		this.customId = customId;
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
+	}
+
+	public CustomPK getCustomPK() {
+		return customPK;
+	}
+
+	public void setCustomPK(CustomPK customPK) {
+		this.customPK = customPK;
 	}
 
 		

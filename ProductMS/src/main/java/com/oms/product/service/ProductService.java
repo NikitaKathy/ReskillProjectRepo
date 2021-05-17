@@ -14,5 +14,7 @@ public interface ProductService {
 	public ProductDTO getProductByName(String name) throws ProductMsException;
 	
 	public List<ProductDTO> getProductByCategory(String category) throws ProductMsException;
+	
+	public ProductDTO getProductById(String id) throws ProductMsException;
 
 }
