@@ -1,16 +1,25 @@
 package com.oms.user.service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.oms.user.dto.BuyerDTO;
+import com.oms.user.dto.CartDTO;
 import com.oms.user.dto.SellerDTO;
 import com.oms.user.entity.Buyer;
+import com.oms.user.entity.Cart;
 import com.oms.user.entity.Seller;
+import com.oms.user.entity.Wishlist;
 import com.oms.user.exception.UserMsException;
 import com.oms.user.repository.BuyerRepository;
+import com.oms.user.repository.CartRepository;
 import com.oms.user.repository.SellerRepository;
+import com.oms.user.repository.WishlistRepository;
+import com.oms.user.utility.CustomPK;
 import com.oms.user.validator.UserValidator;
 
 @Service(value = "userService")
@@ -32,6 +41,12 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private SellerRepository sellerRepository;
 
+	@Autowired
+	private WishlistRepository wishlistRepository;
+	
+	@Autowired
+	private CartRepository cartRepository;
+	
 	@Override
 	public String buyerRegistration(BuyerDTO buyerDTO) throws UserMsException {
 		// TODO Auto-generated method stub
@@ -153,6 +168,60 @@ public class UserServiceImpl implements UserService {
 		sellerRepository.delete(seller);
 		
 		return "Account successfully deleted";
+	}
+
+	@Override
+	public String wishlistService(String prodId, String buyerId) {
+		
+		CustomPK cust = new CustomPK(prodId,buyerId);
+	
+		Wishlist w = new Wishlist();
+		
+		w.setCustomId(cust);
+		
+		wishlistRepository.save(w);
+		
+		return "Added Successfully to Wishlist";
+	}
+	
+	@Override
+	public String cartService(String prodId, String buyerId, Integer quantity) {
+		
+		CustomPK cust = new CustomPK(prodId,buyerId);
+	
+		Cart cart = new Cart();
+		
+		cart.setCustomPK(cust);
+		
+		cart.setQuantity(quantity);
+		
+		cartRepository.save(cart);
+		
+		return "Added Successfully to Cart";
+	}
+
+	@Override
+	public List<CartDTO> getCartProducts(String id) throws UserMsException {
+		
+		List<Cart> list = cartRepository.findByCustomPKBuyerId(id);
+		
+		if(list.isEmpty())
+			throw new UserMsException("No Items In Cart");
+		
+		List<CartDTO> li = new ArrayList<>();
+		
+		for(Cart cart : list)
+		{
+			CartDTO cartDTO = new CartDTO();
+			
+			cartDTO.setBuyerId(cart.getCustomPK().getBuyerId());
+			cartDTO.setSellerId(cart.getCustomPK().getProdId());
+			cartDTO.setQuantity(cart.getQuantity());
+			
+			li.add(cartDTO);
+		}
+		
+		return li;
 	}
 
 }

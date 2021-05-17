@@ -2,6 +2,9 @@ package com.oms.user.utility;
 
 import java.io.Serializable;
 
+import javax.persistence.Embeddable;
+
+@Embeddable
 @SuppressWarnings("serial")
 public class CustomPK implements Serializable {
 	
@@ -23,6 +26,22 @@ public class CustomPK implements Serializable {
 		result = prime * result + ((buyerId == null) ? 0 : buyerId.hashCode());
 		result = prime * result + ((prodId == null) ? 0 : prodId.hashCode());
 		return result;
+	}
+
+	public String getProdId() {
+		return prodId;
+	}
+
+	public void setProdId(String prodId) {
+		this.prodId = prodId;
+	}
+
+	public String getBuyerId() {
+		return buyerId;
+	}
+
+	public void setBuyerId(String buyerId) {
+		this.buyerId = buyerId;
 	}
 
 	@Override

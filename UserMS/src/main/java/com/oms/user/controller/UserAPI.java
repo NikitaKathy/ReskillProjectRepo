@@ -1,17 +1,24 @@
 package com.oms.user.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+import org.springframework.web.server.ResponseStatusException;
 
 import com.oms.user.dto.BuyerDTO;
+import com.oms.user.dto.CartDTO;
+import com.oms.user.dto.ProductDTO;
 import com.oms.user.dto.SellerDTO;
 import com.oms.user.exception.UserMsException;
 import com.oms.user.service.UserService;
@@ -95,5 +102,46 @@ public class UserAPI {
 		return new ResponseEntity<String>(msg,HttpStatus.OK);
 	}
 	
+	@PostMapping(value = "/buyer/wishlist/add/{buyerId}/{prodName}")
+	public ResponseEntity<String> addProductToWishlist(@PathVariable String buyerId, @PathVariable String prodName)
+	{
+		
+		ProductDTO product = new RestTemplate().getForObject("http://localhost:8100/prodMs/getByName/"+prodName, ProductDTO.class);
+		
+		String msg = userServiceNew.wishlistService(product.getProdId(), buyerId);
+		
+		return new ResponseEntity<String>(msg,HttpStatus.ACCEPTED);
+	}
+	
+	@PostMapping(value = "/buyer/cart/add/{buyerId}/{prodName}/{quantity}")
+	public ResponseEntity<String> addProductToCart(@PathVariable String buyerId, @PathVariable String prodName, @PathVariable Integer quantity)
+	{
+		
+		ProductDTO product = new RestTemplate().getForObject("http://localhost:8100/prodMs/getByName/"+prodName, ProductDTO.class);
+		
+		String msg = userServiceNew.cartService(product.getProdId(), buyerId, quantity);
+		
+		return new ResponseEntity<String>(msg,HttpStatus.ACCEPTED);
+	}
+	
+	
+	@GetMapping(value = "/buyer/cart/get/{buyerId}")
+	public ResponseEntity<List<CartDTO>> getProductListFromCart(@PathVariable String buyerId) throws UserMsException
+	{
+		
+		//ProductDTO product = new RestTemplate().getForObject("http://localhost:8100/prodMs/getByName/"+prodName, ProductDTO.class);
+		try {
+		List<CartDTO> list = userServiceNew.getCartProducts(buyerId);
+		
+		return new ResponseEntity<List<CartDTO>>(list,HttpStatus.ACCEPTED);
+		}
+		catch(UserMsException e)
+		{
+			System.out.println(e.getMessage());
+			String msg = e.getMessage();
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND, msg, e);
+			
+		}
+	}
 	
 }

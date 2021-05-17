@@ -79,6 +79,30 @@ public class ProductServiceImpl implements ProductService {
 		
 		return productDTO;
 	}
+	
+	@Override
+	public ProductDTO getProductById(String id) throws ProductMsException {
+		
+		Product product = productRepository.findByProdId(id);
+		
+		if(product == null)
+			throw new ProductMsException("Product Doesn't exist");
+		
+		ProductDTO productDTO = new ProductDTO();
+		
+		productDTO.setProdId(product.getProdId());
+		productDTO.setCategory(product.getCategory());
+		productDTO.setDescription(product.getDescription());
+		productDTO.setImage(product.getImage());
+		productDTO.setPrice(product.getPrice());
+		productDTO.setProductName(product.getProductName());
+		productDTO.setProductRating(product.getProductRating());
+		productDTO.setSellerId(product.getSellerId());
+		productDTO.setStock(product.getStock());
+		productDTO.setSubCategory(product.getCategory());
+		
+		return productDTO;
+	}
 
 	@Override
 	public String deleteProduct(String id) throws ProductMsException {
