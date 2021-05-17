@@ -23,11 +23,17 @@ import com.oms.order.validator.OrderValidator;
 @Transactional
 public class OrderServiceImpl implements OrderService {
 	
+	private static int o;
+	
 	@Autowired
 	private OrderRepository orderRepository;
 	
 	@Autowired
 	private ProductsOrderedRepository prodOrderedRepository;
+	
+	static {
+		o=100;
+	}
 
 	@Override
 	public List<OrderDTO> viewAllOrders() throws OrderMsException {
@@ -52,9 +58,13 @@ public class OrderServiceImpl implements OrderService {
 			throws OrderMsException {
 		Order order = new Order();
 		OrderValidator.validateOrder(orderDTO);
+		String id = "O" + o++;
+		order.setOrderId(id);
+		order.setAddress(orderDTO.getAddress());
 		order.setBuyerId(cartList.get(0).getBuyerId());
 		order.setDate(LocalDate.now());
 		order.setStatus("Order Placed");	
+		order.setAmount(0f);
 		List<ProductsOrdered> productsOrdered = new ArrayList<>();
 		for(int i = 0; i<cartList.size();i++) {
 			OrderValidator.validateStock(cartList.get(i), productList.get(i));			

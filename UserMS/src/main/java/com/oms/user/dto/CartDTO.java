@@ -3,7 +3,7 @@ package com.oms.user.dto;
 public class CartDTO {
 	
 	private String buyerId;
-	private String sellerId;
+	private String prodId;
 	private Integer quantity;
 	
 	public String getBuyerId() {
@@ -12,11 +12,11 @@ public class CartDTO {
 	public void setBuyerId(String buyerId) {
 		this.buyerId = buyerId;
 	}
-	public String getSellerId() {
-		return sellerId;
+	public String getProdId() {
+		return prodId;
 	}
-	public void setSellerId(String sellerId) {
-		this.sellerId = sellerId;
+	public void setProdId(String prodId) {
+		this.prodId = prodId;
 	}
 	public Integer getQuantity() {
 		return quantity;

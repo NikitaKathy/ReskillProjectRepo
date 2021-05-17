@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.server.ResponseStatusException;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.oms.order.dto.CartDTO;
 import com.oms.order.dto.OrderDTO;
 import com.oms.order.dto.ProductDTO;
@@ -31,28 +33,34 @@ public class OrderAPI {
 	public ResponseEntity<String> placeOrder(@PathVariable String buyerId, @RequestBody OrderDTO order){
 		
 		try {
+			ObjectMapper mapper = new ObjectMapper();
 			List<ProductDTO> productList = new ArrayList<>();
-			@SuppressWarnings("unchecked")
-			List<CartDTO> cartList=new RestTemplate().getForObject("http://localhost:8200/userMs/getCartByBuyerId/" + buyerId, List.class);
+			List<CartDTO> cartList = mapper.convertValue(
+					new RestTemplate().getForObject("http://localhost:8200/userms/buyer/cart/get/" + buyerId, List.class), 
+				    new TypeReference<List<CartDTO>>(){}
+				);
 			
 			cartList.forEach(item ->{
-				ProductDTO prod = new RestTemplate().getForObject("http://localhost:8100/prodMs/getByProdId/" +item.getProdId(),ProductDTO.class) ; //getByProdId/{productId}
+				ProductDTO prod = new RestTemplate().getForObject("http://localhost:8100/prodMs/getById/" +item.getProdId(),ProductDTO.class) ; //getByProdId/{productId}
+				System.out.println(prod.getDescription());
 				productList.add(prod);
 			});
+			
+			System.out.println(productList.get(0) instanceof ProductDTO);
+			System.out.println(productList.get(0).getProductName());
 			String orderId = orderService.placeOrder(productList,cartList,order);
 			return new ResponseEntity<>(orderId,HttpStatus.ACCEPTED);
 		}
 		catch(Exception e)
 		{
 			return new ResponseEntity<>(e.getMessage(),HttpStatus.UNAUTHORIZED);
-//			throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, e.getMessage(), e);
 		}
+		
 		
 	}
 	
 	@GetMapping(value = "/viewAll")
-	public ResponseEntity<List<OrderDTO>> viewAllOrder(){
-		
+	public ResponseEntity<List<OrderDTO>> viewAllOrder(){		
 		try {
 			List<OrderDTO> allOrders = orderService.viewAllOrders();
 			return new ResponseEntity<>(allOrders,HttpStatus.OK);
@@ -60,8 +68,7 @@ public class OrderAPI {
 		catch(Exception e)
 		{
 			throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage(), e);
-		}
-		
+		}		
 	}
 	
 	

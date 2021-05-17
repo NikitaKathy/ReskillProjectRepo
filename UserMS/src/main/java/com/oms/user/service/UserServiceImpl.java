@@ -215,7 +215,7 @@ public class UserServiceImpl implements UserService {
 			CartDTO cartDTO = new CartDTO();
 			
 			cartDTO.setBuyerId(cart.getCustomPK().getBuyerId());
-			cartDTO.setSellerId(cart.getCustomPK().getProdId());
+			cartDTO.setProdId(cart.getCustomPK().getProdId());
 			cartDTO.setQuantity(cart.getQuantity());
 			
 			li.add(cartDTO);
