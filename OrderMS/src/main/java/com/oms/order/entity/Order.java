@@ -1,8 +1,15 @@
-package com.oms.order.dto;
+package com.oms.order.entity;
 
 import java.time.LocalDate;
 
-public class OrderDTO {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "order_table")
+public class Order {
+	@Id
 	private String orderId;
 	private String buyerId;
 	private Float amount;
@@ -36,8 +43,8 @@ public class OrderDTO {
 	public String getAddress() {
 		return address;
 	}
-	public void setAddress(String addrerss) {
-		this.address = addrerss;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 	public String getStatus() {
 		return status;
@@ -47,5 +54,4 @@ public class OrderDTO {
 	}
 	
 	
-
 }

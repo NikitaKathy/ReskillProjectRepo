@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.oms.product.dto.ProductDTO;
-import com.oms.product.repository.ProductRepository;
 import com.oms.product.service.ProductService;
 
 @RestController
