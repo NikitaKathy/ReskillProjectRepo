@@ -118,7 +118,7 @@ public class OrderServiceImpl implements OrderService {
 
 	@Override
 	public String reOrder(String buyerId, String orderId) throws OrderMsException {
-		Optional<Order> optional = orderRepository.findByOrderIdandBuyerId(orderId,buyerId);
+		Optional<Order> optional = orderRepository.findByOrderId(orderId);
 		Order order = optional.orElseThrow(()->new OrderMsException("Order does not exist for the given buyer"));
 		Order reorder = new Order();
 		String id = "O" + o++;

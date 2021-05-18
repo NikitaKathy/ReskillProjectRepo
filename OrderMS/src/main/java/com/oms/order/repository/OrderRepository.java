@@ -12,6 +12,5 @@ public interface OrderRepository extends CrudRepository<Order, String>{
 
 	public Optional<Order> findByOrderId(String orderId);
 
-	public Optional<Order> findByOrderIdandBuyerId(String orderId, String buyerId);
 
 }
