@@ -13,4 +13,10 @@ public interface OrderService {
 
 	public String placeOrder(List<ProductDTO> productList, List<CartDTO> cartList, OrderDTO order) throws OrderMsException;
 
+	public List<OrderDTO> viewOrdersByBuyer(String buyerId)throws OrderMsException;
+
+	public OrderDTO viewOrder(String orderId) throws OrderMsException;
+
+	public String reOrder(String buyerId, String orderId) throws OrderMsException;
+
 }

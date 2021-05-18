@@ -58,16 +58,13 @@ public class OrderAPI {
 				productList.add(prod);
 			});
 			
-			System.out.println(productList.get(0) instanceof ProductDTO);
-			System.out.println(productList.get(0).getProductName());
 			String orderId = orderService.placeOrder(productList,cartList,order);
 			return new ResponseEntity<>(orderId,HttpStatus.ACCEPTED);
 		}
 		catch(Exception e)
 		{
 			return new ResponseEntity<>(e.getMessage(),HttpStatus.UNAUTHORIZED);
-		}
-		
+		}		
 		
 	}
 	
@@ -83,6 +80,45 @@ public class OrderAPI {
 		}		
 	}
 	
+	@GetMapping(value = "/orderMS/viewOrders/{buyerId}")
+	public ResponseEntity<List<OrderDTO>> viewsOrdersByBuyerId(@PathVariable String buyerId){		
+		try {
+			List<OrderDTO> allOrders = orderService.viewOrdersByBuyer(buyerId);
+			return new ResponseEntity<>(allOrders,HttpStatus.OK);
+		}
+		catch(Exception e)
+		{
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage(), e);
+		}		
+	}
+	
+	@GetMapping(value = "/orderMS/viewOrder/{orderId}")
+	public ResponseEntity<OrderDTO> viewsOrderByOrderId(@PathVariable String orderId){		
+		try {
+			OrderDTO allOrders = orderService.viewOrder(orderId);
+			return new ResponseEntity<>(allOrders,HttpStatus.OK);
+		}
+		catch(Exception e)
+		{
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage(), e);
+		}		
+	}
+	
+	
+	@PostMapping(value = "/orderMS/reOrder/{buyerId}/{orderId}")
+	public ResponseEntity<String> reOrder(@PathVariable String buyerId, @PathVariable String orderId){
+		
+		try {
+			
+			String id = orderService.reOrder(buyerId,orderId);
+			return new ResponseEntity<>("Order ID: "+id,HttpStatus.ACCEPTED);
+		}
+		catch(Exception e)
+		{
+			return new ResponseEntity<>(e.getMessage(),HttpStatus.UNAUTHORIZED);
+		}		
+		
+	}
 	
 
 }

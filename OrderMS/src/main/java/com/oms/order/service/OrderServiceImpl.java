@@ -3,9 +3,8 @@ package com.oms.order.service;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,6 +18,7 @@ import com.oms.order.exception.OrderMsException;
 import com.oms.order.repository.OrderRepository;
 import com.oms.order.repository.ProductsOrderedRepository;
 import com.oms.order.utility.CustomPK;
+import com.oms.order.utility.OrderStatus;
 import com.oms.order.validator.OrderValidator;
 
 @Service(value = "orderService")
@@ -52,8 +52,6 @@ public class OrderServiceImpl implements OrderService {
 			dtoList.add(odto);			
 		});
 		if(dtoList.isEmpty()) throw new OrderMsException("No orders available");
-		Logger logger = LogManager.getLogger(this.getClass());
-		logger.info("Orders displayed");
 		return dtoList;
 	}
 
@@ -67,7 +65,7 @@ public class OrderServiceImpl implements OrderService {
 		order.setAddress(orderDTO.getAddress());
 		order.setBuyerId(cartList.get(0).getBuyerId());
 		order.setDate(LocalDate.now());
-		order.setStatus("Order Placed");	
+		order.setStatus(OrderStatus.ORDER_PLACED.toString());	
 		order.setAmount(0f);
 		List<ProductsOrdered> productsOrdered = new ArrayList<>();
 		for(int i = 0; i<cartList.size();i++) {
@@ -84,6 +82,55 @@ public class OrderServiceImpl implements OrderService {
 		orderRepository.save(order);
 		
 		return order.getOrderId();
+	}
+
+	@Override
+	public List<OrderDTO> viewOrdersByBuyer(String buyerId) throws OrderMsException {
+		List<Order> orders = orderRepository.findByBuyerId(buyerId);
+		if(orders.isEmpty()) throw new OrderMsException("No orders available for given BuyerID");
+		List<OrderDTO> dtoList = new ArrayList<>();
+		orders.forEach(order->{
+			OrderDTO odto = new OrderDTO();
+			odto.setOrderId(order.getOrderId());
+			odto.setBuyerId(order.getBuyerId());
+			odto.setAmount(order.getAmount());
+			odto.setAddress(order.getAddress());
+			odto.setDate(order.getDate());
+			odto.setStatus(order.getStatus());
+			dtoList.add(odto);
+		});
+		return dtoList;
+	}
+
+	@Override
+	public OrderDTO viewOrder(String orderId) throws OrderMsException {
+		Optional<Order> optional = orderRepository.findByOrderId(orderId);
+		Order order = optional.orElseThrow(()->new OrderMsException("Order does not exist"));
+		OrderDTO orderDTO = new OrderDTO();
+		orderDTO.setOrderId(order.getOrderId());
+		orderDTO.setBuyerId(order.getBuyerId());
+		orderDTO.setAmount(order.getAmount());
+		orderDTO.setAddress(order.getAddress());
+		orderDTO.setDate(order.getDate());
+		orderDTO.setStatus(order.getStatus());		
+		return orderDTO;
+	}
+
+	@Override
+	public String reOrder(String buyerId, String orderId) throws OrderMsException {
+		Optional<Order> optional = orderRepository.findByOrderIdandBuyerId(orderId,buyerId);
+		Order order = optional.orElseThrow(()->new OrderMsException("Order does not exist for the given buyer"));
+		Order reorder = new Order();
+		String id = "O" + o++;
+		reorder.setOrderId(id);
+		reorder.setBuyerId(order.getBuyerId());
+		reorder.setAmount(order.getAmount());
+		reorder.setAddress(order.getAddress());
+		reorder.setDate(LocalDate.now());
+		reorder.setStatus(order.getStatus());
+		
+		orderRepository.save(reorder);		
+		return reorder.getOrderId();
 	}
 
 }

@@ -128,9 +128,12 @@ public class UserAPI {
 		List<ServiceInstance> instances=client.getInstances("PRODUCTMS");
 		ServiceInstance instance=instances.get(0);
 		URI productUri = instance.getUri();
-		 
-		ProductDTO product = new RestTemplate().getForObject(productUri+"/prodMs/getByName/"+prodName, ProductDTO.class);
+		System.out.println(productUri);
 		
+		 
+		ProductDTO product = new RestTemplate().getForObject(productUri+"/prodMS/getByName/"+prodName, ProductDTO.class);
+		System.out.println(product);
+		System.out.println(product instanceof ProductDTO);
 		String msg = userServiceNew.cartService(product.getProdId(), buyerId, quantity);
 		
 		return new ResponseEntity<String>(msg,HttpStatus.ACCEPTED);
