@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -18,13 +17,13 @@ import com.oms.product.dto.ProductDTO;
 import com.oms.product.service.ProductService;
 
 @RestController
-@RequestMapping("/prodMs")
+//@RequestMapping("/prodMs")
 public class ProductAPI {
 	
 	@Autowired
 	private ProductService productService;
 	
-	@PostMapping(value = "/addProduct")
+	@PostMapping(value = "/prodMS/addProduct")
 	public ResponseEntity<String> addProduct(@RequestBody ProductDTO prod){
 		
 		try {
@@ -38,7 +37,7 @@ public class ProductAPI {
 		
 	}
 	
-	@GetMapping(value = "/getByName/{name}")
+	@GetMapping(value = "/prodMS/getByName/{name}")
 	public ResponseEntity<ProductDTO> getByProductName(@PathVariable String name)
 	{
 		System.out.println("Entered here");
@@ -52,7 +51,7 @@ public class ProductAPI {
 		}
 	}
 	
-	@GetMapping(value = "/getById/{id}")
+	@GetMapping(value = "/prodMS/getById/{id}")
 	public ResponseEntity<ProductDTO> getByProductId(@PathVariable String id)
 	{
 		try {
@@ -65,7 +64,7 @@ public class ProductAPI {
 		}
 	}
 	
-	@GetMapping(value = "/getByCategory/{name}")
+	@GetMapping(value = "/prodMS/getByCategory/{name}")
 	public ResponseEntity<List<ProductDTO>> getByProductCategory(@PathVariable String name)
 	{
 		System.out.println("Entered here");
@@ -79,7 +78,7 @@ public class ProductAPI {
 		}
 	}
 	
-	@DeleteMapping(value = "/deleteProduct/{id}")
+	@DeleteMapping(value = "/prodMS/deleteProduct/{id}")
 	public ResponseEntity<String> deleteProduct(@PathVariable String id){
 		
 		try {

@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.server.ResponseStatusException;
@@ -26,7 +25,6 @@ import com.oms.order.dto.ProductDTO;
 import com.oms.order.service.OrderService;
 
 @RestController
-@RequestMapping(value = "/orderMs")
 public class OrderAPI {
 	
 	@Autowired
@@ -35,14 +33,18 @@ public class OrderAPI {
 	@Autowired
 	DiscoveryClient client;
 	
-	@PostMapping(value = "/placeOrder/{buyerId}")
+	@PostMapping(value = "/orderMS/placeOrder/{buyerId}")
 	public ResponseEntity<String> placeOrder(@PathVariable String buyerId, @RequestBody OrderDTO order){
 		
 		try {
+			List<ServiceInstance> userInstances=client.getInstances("USERMS");
+			ServiceInstance userInstance=userInstances.get(0);
+			URI userUri = userInstance.getUri();
+			
 			ObjectMapper mapper = new ObjectMapper();
 			List<ProductDTO> productList = new ArrayList<>();
 			List<CartDTO> cartList = mapper.convertValue(
-					new RestTemplate().getForObject("http://localhost:8200/userms/buyer/cart/get/" + buyerId, List.class), 
+					new RestTemplate().getForObject(userUri+"/userMS/buyer/cart/get/" + buyerId, List.class), 
 				    new TypeReference<List<CartDTO>>(){}
 				);
 			
@@ -51,7 +53,7 @@ public class OrderAPI {
 			URI productUri = instance.getUri();
 			
 			cartList.forEach(item ->{
-				ProductDTO prod = new RestTemplate().getForObject(productUri+"/prodMs/getById/" +item.getProdId(),ProductDTO.class) ; //getByProdId/{productId}
+				ProductDTO prod = new RestTemplate().getForObject(productUri+"/prodMS/getById/" +item.getProdId(),ProductDTO.class) ; //getByProdId/{productId}
 				System.out.println(prod.getDescription());
 				productList.add(prod);
 			});
@@ -69,7 +71,7 @@ public class OrderAPI {
 		
 	}
 	
-	@GetMapping(value = "/viewAll")
+	@GetMapping(value = "/orderMS/viewAll")
 	public ResponseEntity<List<OrderDTO>> viewAllOrder(){		
 		try {
 			List<OrderDTO> allOrders = orderService.viewAllOrders();

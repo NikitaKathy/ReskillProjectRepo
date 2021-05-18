@@ -28,7 +28,6 @@ import com.oms.user.exception.UserMsException;
 import com.oms.user.service.UserService;
 
 @RestController
-@RequestMapping(value = "userms")
 @CrossOrigin
 public class UserAPI {
 	
@@ -38,7 +37,7 @@ public class UserAPI {
 	@Autowired
 	DiscoveryClient client;
 	
-	@PostMapping(value = "/buyer/register")
+	@PostMapping(value = "/userMS/buyer/register")
 	public ResponseEntity<String> registerBuyer(@RequestBody BuyerDTO buyerDto){
 		
 		try {
@@ -51,7 +50,7 @@ public class UserAPI {
 		}
 	}
 	
-	@PostMapping(value = "/seller/register")
+	@PostMapping(value = "/userMS/seller/register")
 	public ResponseEntity<String> registerSeller(@RequestBody SellerDTO sellerDto){
 		
 		try {
@@ -65,7 +64,7 @@ public class UserAPI {
 
 	}
 	
-	@PostMapping(value = "/buyer/login/{email}/{password}")
+	@PostMapping(value = "/userMS/buyer/login/{email}/{password}")
 	public ResponseEntity<String> loginBuyer(@PathVariable String email, @PathVariable String password)
 	{
 		try {
@@ -78,7 +77,7 @@ public class UserAPI {
 		}
 	}
 	
-	@PostMapping(value = "/seller/login/{email}/{password}")
+	@PostMapping(value = "/userMS/seller/login/{email}/{password}")
 	public ResponseEntity<String> loginSeller(@PathVariable String email, @PathVariable String password)
 	{
 		try {
@@ -91,7 +90,7 @@ public class UserAPI {
 		}
 	}
 	
-	@DeleteMapping(value = "/buyer/deactivate/{id}")
+	@DeleteMapping(value = "/userMS/buyer/deactivate/{id}")
 	public ResponseEntity<String> deleteBuyerAccount(@PathVariable String id){
 		
 		String msg = userServiceNew.deleteBuyer(id);
@@ -101,7 +100,7 @@ public class UserAPI {
 		
 	}
 	
-	@DeleteMapping(value = "/seller/deactivate/{id}")
+	@DeleteMapping(value = "/userMS/seller/deactivate/{id}")
 	public ResponseEntity<String> deleteSellerAccount(@PathVariable String id){
 		
 		String msg = userServiceNew.deleteSeller(id);
@@ -109,7 +108,7 @@ public class UserAPI {
 		return new ResponseEntity<String>(msg,HttpStatus.OK);
 	}
 	
-	@PostMapping(value = "/buyer/wishlist/add/{buyerId}/{prodName}")
+	@PostMapping(value = "/userMS/buyer/wishlist/add/{buyerId}/{prodName}")
 	public ResponseEntity<String> addProductToWishlist(@PathVariable String buyerId, @PathVariable String prodName)
 	{
 		List<ServiceInstance> instances=client.getInstances("PRODUCTMS");
@@ -123,7 +122,7 @@ public class UserAPI {
 		return new ResponseEntity<String>(msg,HttpStatus.ACCEPTED);
 	}
 	
-	@PostMapping(value = "/buyer/cart/add/{buyerId}/{prodName}/{quantity}")
+	@PostMapping(value = "/userMS/buyer/cart/add/{buyerId}/{prodName}/{quantity}")
 	public ResponseEntity<String> addProductToCart(@PathVariable String buyerId, @PathVariable String prodName, @PathVariable Integer quantity)
 	{
 		List<ServiceInstance> instances=client.getInstances("PRODUCTMS");
@@ -138,7 +137,7 @@ public class UserAPI {
 	}
 	
 	
-	@GetMapping(value = "/buyer/cart/get/{buyerId}")
+	@GetMapping(value = "/userMS/buyer/cart/get/{buyerId}")
 	public ResponseEntity<List<CartDTO>> getProductListFromCart(@PathVariable String buyerId) throws UserMsException
 	{
 		
