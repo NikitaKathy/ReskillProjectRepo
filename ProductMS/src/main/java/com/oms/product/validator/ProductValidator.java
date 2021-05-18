@@ -7,8 +7,20 @@ public class ProductValidator {
 	
 	public static void validateProduct(ProductDTO product) throws ProductMsException {
 		
-		if(!(validateName(product.getProductName())&&validateDescription(product.getDescription())&&validatePrice(product.getPrice())&&validateImage(product.getImage())&&validateStock(product.getStock())))
-			throw new ProductMsException("Enter Valid Values");
+		if(!validateName(product.getProductName()))
+			throw new ProductMsException("Validator.VALIDATE_NAME");
+		
+		if(!validateDescription(product.getDescription()))
+			throw new ProductMsException("Validator.VALIDATE_DESCRIPTION");
+			
+		if(!validatePrice(product.getPrice()))
+			throw new ProductMsException("Validator.VALIDATE_PRICE");
+		
+		if(!validateStock(product.getStock()))
+			throw new ProductMsException("Validator.VALIDATE_STOCK");
+		
+		if(!validateImage(product.getImage()))
+			throw new ProductMsException("Validator.VALIDATE_IMAGE");
 		
 	}
 	

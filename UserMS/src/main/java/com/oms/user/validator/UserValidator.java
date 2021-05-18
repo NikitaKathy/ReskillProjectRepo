@@ -8,19 +8,35 @@ public class UserValidator {
 	
 	public static void validateBuyer(BuyerDTO buyer) throws UserMsException {
 		
-		if(!(validateName(buyer.getName())&&validateEmail(buyer.getEmail())&&validateContactNumber(buyer.getPhoneNumber())&&validatePassword(buyer.getPassword()))) {
+		if(!validateName(buyer.getName()))
+			throw new UserMsException("Validator.ENTER_VALID_NAME");
+		
+		if(!validateEmail(buyer.getEmail()))
+			throw new UserMsException("Validator.ENTER_VALID_EMAIL");
+		
+		if(!validateContactNumber(buyer.getPhoneNumber()))
+			throw new UserMsException("Validator.ENTER_VALID_NUMBER");
+		
 			
-			throw new UserMsException("Enter valid Values");
-		}
+		if(!validatePassword(buyer.getPassword()))
+			throw new UserMsException("Validator.Enter_VALID_PASSWORD");
 		
 	}
 	
-	public static void validateSeller(SellerDTO seller) throws UserMsException {
+	public static void validateSeller(SellerDTO buyer) throws UserMsException {
 		
-		if(!(validateName(seller.getName())&&validateEmail(seller.getEmail())&&validateContactNumber(seller.getPhoneNumber())&&validatePassword(seller.getPassword()))) {
+		if(!validateName(buyer.getName()))
+			throw new UserMsException("Validator.ENTER_VALID_NAME");
+		
+		if(!validateEmail(buyer.getEmail()))
+			throw new UserMsException("Validator.ENTER_VALID_EMAIL");
+		
+		if(!validateContactNumber(buyer.getPhoneNumber()))
+			throw new UserMsException("Validator.ENTER_VALID_NUMBER");
+		
 			
-			throw new UserMsException("Enter valid Values");
-		}
+		if(!validatePassword(buyer.getPassword()))
+			throw new UserMsException("Validator.Enter_VALID_PASSWORD");
 		
 	}
 	
