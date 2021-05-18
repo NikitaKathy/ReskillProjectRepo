@@ -1,0 +1,554 @@
+Fetching config from server at : http://localhost:1111
+Located environment: name=UserMS, profiles=[default], label=null, version=d435ee8f06b0f76ea38de775e30a9b0056bab66f, state=null
+Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='https://github.com/rajat12122/ConfigurationRepo.git/UserMS.properties'}, MapPropertySource {name='https://github.com/rajat12122/ConfigurationRepo.git/application.properties'}]}
+No active profile set, falling back to default profiles: default
+Bootstrapping Spring Data repositories in DEFAULT mode.
+Finished Spring Data repository scanning in 54ms. Found 4 repository interfaces.
+BeanFactory id=75e1dc88-20e7-3197-ac8a-7444e0f4ee3d
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d778bc2b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f392bf28] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Tomcat initialized with port(s): 8200 (http)
+Initializing ProtocolHandler ["http-nio-8200"]
+Starting service [Tomcat]
+Starting Servlet engine: [Apache Tomcat/9.0.14]
+The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Users\NikitaKathy\Desktop\spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting\contents\sts-4.10.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/NikitaKathy/Desktop/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting/contents/sts-4.10.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin/server;C:/Users/NikitaKathy/Desktop/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting/contents/sts-4.10.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk-12.0.2\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\NikitaKathy\AppData\Local\Microsoft\WindowsApps;C:\Users\NikitaKathy\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\NikitaKathy\AppData\Roaming\npm;C:\Users\NikitaKathy\Desktop\spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting\contents\sts-4.10.0.RELEASE;;.]
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 1472 ms
+HikariPool-1 - Starting...
+Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+HikariPool-1 - Start completed.
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.3.7.Final}
+HHH000206: hibernate.properties not found
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Initializing ExecutorService 'applicationTaskExecutor'
+spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+Starting ProtocolHandler ["http-nio-8200"]
+Tomcat started on port(s): 8200 (http) with context path ''
+Started UserMsApplication in 5.934 seconds (JVM running for 6.95)
+Initializing Spring DispatcherServlet 'dispatcherServlet'
+Initializing Servlet 'dispatcherServlet'
+Completed initialization in 14 ms
+Enter valid Values
+Enter valid Values
+Application shutdown requested.
+Shutting down ExecutorService 'applicationTaskExecutor'
+Closing JPA EntityManagerFactory for persistence unit 'default'
+HikariPool-1 - Shutdown initiated...
+HikariPool-1 - Shutdown completed.
+Pausing ProtocolHandler ["http-nio-8200"]
+Stopping service [Tomcat]
+Destroying Spring FrameworkServlet 'dispatcherServlet'
+Stopping ProtocolHandler ["http-nio-8200"]
+Destroying ProtocolHandler ["http-nio-8200"]
+Fetching config from server at : http://localhost:1111
+Located environment: name=UserMS, profiles=[default], label=null, version=d435ee8f06b0f76ea38de775e30a9b0056bab66f, state=null
+Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='https://github.com/rajat12122/ConfigurationRepo.git/UserMS.properties'}, MapPropertySource {name='https://github.com/rajat12122/ConfigurationRepo.git/application.properties'}]}
+Bootstrapping Spring Data repositories in DEFAULT mode.
+Finished Spring Data repository scanning in 52ms. Found 4 repository interfaces.
+BeanFactory id=75e1dc88-20e7-3197-ac8a-7444e0f4ee3d
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$782ac032] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$9444c32f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Tomcat initialized with port(s): 8200 (http)
+Initializing ProtocolHandler ["http-nio-8200"]
+Starting service [Tomcat]
+Starting Servlet engine: [Apache Tomcat/9.0.14]
+The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Users\NikitaKathy\Desktop\spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting\contents\sts-4.10.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/NikitaKathy/Desktop/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting/contents/sts-4.10.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin/server;C:/Users/NikitaKathy/Desktop/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting/contents/sts-4.10.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk-12.0.2\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\NikitaKathy\AppData\Local\Microsoft\WindowsApps;C:\Users\NikitaKathy\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\NikitaKathy\AppData\Roaming\npm;C:\Users\NikitaKathy\Desktop\spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting\contents\sts-4.10.0.RELEASE;;.]
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 1432 ms
+HikariPool-1 - Starting...
+Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+HikariPool-1 - Start completed.
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.3.7.Final}
+HHH000206: hibernate.properties not found
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Initializing ExecutorService 'applicationTaskExecutor'
+spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+Starting ProtocolHandler ["http-nio-8200"]
+Tomcat started on port(s): 8200 (http) with context path ''
+Application shutdown requested.
+Shutting down ExecutorService 'applicationTaskExecutor'
+Closing JPA EntityManagerFactory for persistence unit 'default'
+HikariPool-1 - Shutdown initiated...
+HikariPool-1 - Shutdown completed.
+Pausing ProtocolHandler ["http-nio-8200"]
+Stopping service [Tomcat]
+Stopping ProtocolHandler ["http-nio-8200"]
+Destroying ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:11:26 INFO - Fetching config from server at : http://localhost:1111
+18-May-2021 12:11:27 INFO - Located environment: name=UserMS, profiles=[default], label=null, version=d435ee8f06b0f76ea38de775e30a9b0056bab66f, state=null
+18-May-2021 12:11:27 INFO - Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='https://github.com/rajat12122/ConfigurationRepo.git/UserMS.properties'}, MapPropertySource {name='https://github.com/rajat12122/ConfigurationRepo.git/application.properties'}]}
+18-May-2021 12:11:27 INFO - No active profile set, falling back to default profiles: default
+18-May-2021 12:11:27 INFO - Bootstrapping Spring Data repositories in DEFAULT mode.
+18-May-2021 12:11:27 INFO - Finished Spring Data repository scanning in 55ms. Found 4 repository interfaces.
+18-May-2021 12:11:27 INFO - BeanFactory id=75e1dc88-20e7-3197-ac8a-7444e0f4ee3d
+18-May-2021 12:11:27 INFO - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$df5dc8d3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18-May-2021 12:11:28 INFO - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$fb77cbd0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18-May-2021 12:11:28 INFO - Tomcat initialized with port(s): 8200 (http)
+18-May-2021 12:11:28 INFO - Initializing ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:11:28 INFO - Starting service [Tomcat]
+18-May-2021 12:11:28 INFO - Starting Servlet engine: [Apache Tomcat/9.0.14]
+18-May-2021 12:11:28 INFO - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Users\NikitaKathy\Desktop\spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting\contents\sts-4.10.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/NikitaKathy/Desktop/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting/contents/sts-4.10.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin/server;C:/Users/NikitaKathy/Desktop/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting/contents/sts-4.10.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk-12.0.2\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\NikitaKathy\AppData\Local\Microsoft\WindowsApps;C:\Users\NikitaKathy\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\NikitaKathy\AppData\Roaming\npm;C:\Users\NikitaKathy\Desktop\spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting\contents\sts-4.10.0.RELEASE;;.]
+18-May-2021 12:11:28 INFO - Initializing Spring embedded WebApplicationContext
+18-May-2021 12:11:28 INFO - Root WebApplicationContext: initialization completed in 1440 ms
+18-May-2021 12:11:28 INFO - HikariPool-1 - Starting...
+18-May-2021 12:11:28 WARN - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+18-May-2021 12:11:29 INFO - HikariPool-1 - Start completed.
+18-May-2021 12:11:29 INFO - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+18-May-2021 12:11:29 INFO - HHH000412: Hibernate Core {5.3.7.Final}
+18-May-2021 12:11:29 INFO - HHH000206: hibernate.properties not found
+18-May-2021 12:11:29 INFO - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+18-May-2021 12:11:29 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+18-May-2021 12:11:30 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+18-May-2021 12:11:30 INFO - Initializing ExecutorService 'applicationTaskExecutor'
+18-May-2021 12:11:30 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18-May-2021 12:11:31 INFO - Starting ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:11:31 INFO - Tomcat started on port(s): 8200 (http) with context path ''
+18-May-2021 12:11:31 INFO - Started UserMsApplication in 5.861 seconds (JVM running for 6.852)
+18-May-2021 12:11:40 INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18-May-2021 12:11:40 INFO - Initializing Servlet 'dispatcherServlet'
+18-May-2021 12:11:40 INFO - Completed initialization in 17 ms
+18-May-2021 12:11:40 INFO - Enter valid Values
+18-May-2021 12:11:50 INFO - Application shutdown requested.
+18-May-2021 12:11:50 INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+18-May-2021 12:11:50 INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+18-May-2021 12:11:50 INFO - HikariPool-1 - Shutdown initiated...
+18-May-2021 12:11:50 INFO - HikariPool-1 - Shutdown completed.
+18-May-2021 12:11:50 INFO - Pausing ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:11:50 INFO - Stopping service [Tomcat]
+18-May-2021 12:11:50 INFO - Destroying Spring FrameworkServlet 'dispatcherServlet'
+18-May-2021 12:11:50 INFO - Stopping ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:11:50 INFO - Destroying ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:11:59 INFO - Fetching config from server at : http://localhost:1111
+18-May-2021 12:12:00 INFO - Located environment: name=UserMS, profiles=[default], label=null, version=d435ee8f06b0f76ea38de775e30a9b0056bab66f, state=null
+18-May-2021 12:12:00 INFO - Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='https://github.com/rajat12122/ConfigurationRepo.git/UserMS.properties'}, MapPropertySource {name='https://github.com/rajat12122/ConfigurationRepo.git/application.properties'}]}
+18-May-2021 12:12:00 INFO - No active profile set, falling back to default profiles: default
+18-May-2021 12:12:00 INFO - Bootstrapping Spring Data repositories in DEFAULT mode.
+18-May-2021 12:12:00 INFO - Finished Spring Data repository scanning in 54ms. Found 4 repository interfaces.
+18-May-2021 12:12:01 INFO - BeanFactory id=75e1dc88-20e7-3197-ac8a-7444e0f4ee3d
+18-May-2021 12:12:01 INFO - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3ed7fc27] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18-May-2021 12:12:01 INFO - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$5af1ff24] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18-May-2021 12:12:01 INFO - Tomcat initialized with port(s): 8200 (http)
+18-May-2021 12:12:01 INFO - Initializing ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:12:01 INFO - Starting service [Tomcat]
+18-May-2021 12:12:01 INFO - Starting Servlet engine: [Apache Tomcat/9.0.14]
+18-May-2021 12:12:01 INFO - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Users\NikitaKathy\Desktop\spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting\contents\sts-4.10.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/NikitaKathy/Desktop/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting/contents/sts-4.10.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin/server;C:/Users/NikitaKathy/Desktop/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting/contents/sts-4.10.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk-12.0.2\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\NikitaKathy\AppData\Local\Microsoft\WindowsApps;C:\Users\NikitaKathy\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\NikitaKathy\AppData\Roaming\npm;C:\Users\NikitaKathy\Desktop\spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting\contents\sts-4.10.0.RELEASE;;.]
+18-May-2021 12:12:01 INFO - Initializing Spring embedded WebApplicationContext
+18-May-2021 12:12:01 INFO - Root WebApplicationContext: initialization completed in 1458 ms
+18-May-2021 12:12:02 INFO - HikariPool-1 - Starting...
+18-May-2021 12:12:02 WARN - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+18-May-2021 12:12:02 INFO - HikariPool-1 - Start completed.
+18-May-2021 12:12:02 INFO - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+18-May-2021 12:12:02 INFO - HHH000412: Hibernate Core {5.3.7.Final}
+18-May-2021 12:12:02 INFO - HHH000206: hibernate.properties not found
+18-May-2021 12:12:02 INFO - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+18-May-2021 12:12:02 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+18-May-2021 12:12:03 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+18-May-2021 12:12:04 INFO - Initializing ExecutorService 'applicationTaskExecutor'
+18-May-2021 12:12:04 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18-May-2021 12:12:04 INFO - Starting ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:12:04 INFO - Tomcat started on port(s): 8200 (http) with context path ''
+18-May-2021 12:12:04 INFO - Started UserMsApplication in 6.208 seconds (JVM running for 7.389)
+18-May-2021 12:13:18 INFO - Application shutdown requested.
+18-May-2021 12:13:18 INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+18-May-2021 12:13:18 INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+18-May-2021 12:13:18 INFO - HikariPool-1 - Shutdown initiated...
+18-May-2021 12:13:18 INFO - HikariPool-1 - Shutdown completed.
+18-May-2021 12:13:18 INFO - Pausing ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:13:18 INFO - Stopping service [Tomcat]
+18-May-2021 12:13:18 INFO - Stopping ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:13:18 INFO - Destroying ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:13:26 INFO - Fetching config from server at : http://localhost:1111
+18-May-2021 12:13:26 INFO - Located environment: name=UserMS, profiles=[default], label=null, version=d435ee8f06b0f76ea38de775e30a9b0056bab66f, state=null
+18-May-2021 12:13:26 INFO - Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='https://github.com/rajat12122/ConfigurationRepo.git/UserMS.properties'}, MapPropertySource {name='https://github.com/rajat12122/ConfigurationRepo.git/application.properties'}]}
+18-May-2021 12:13:27 INFO - Bootstrapping Spring Data repositories in DEFAULT mode.
+18-May-2021 12:13:27 INFO - Finished Spring Data repository scanning in 56ms. Found 4 repository interfaces.
+18-May-2021 12:13:27 INFO - BeanFactory id=75e1dc88-20e7-3197-ac8a-7444e0f4ee3d
+18-May-2021 12:13:27 INFO - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4290ccc6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18-May-2021 12:13:27 INFO - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$5eaacfc3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18-May-2021 12:13:28 INFO - Tomcat initialized with port(s): 8200 (http)
+18-May-2021 12:13:28 INFO - Initializing ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:13:28 INFO - Starting service [Tomcat]
+18-May-2021 12:13:28 INFO - Starting Servlet engine: [Apache Tomcat/9.0.14]
+18-May-2021 12:13:28 INFO - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Users\NikitaKathy\Desktop\spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting\contents\sts-4.10.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/NikitaKathy/Desktop/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting/contents/sts-4.10.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin/server;C:/Users/NikitaKathy/Desktop/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting/contents/sts-4.10.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk-12.0.2\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\NikitaKathy\AppData\Local\Microsoft\WindowsApps;C:\Users\NikitaKathy\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\NikitaKathy\AppData\Roaming\npm;C:\Users\NikitaKathy\Desktop\spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting\contents\sts-4.10.0.RELEASE;;.]
+18-May-2021 12:13:28 INFO - Initializing Spring embedded WebApplicationContext
+18-May-2021 12:13:28 INFO - Root WebApplicationContext: initialization completed in 1480 ms
+18-May-2021 12:13:28 INFO - HikariPool-1 - Starting...
+18-May-2021 12:13:28 WARN - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+18-May-2021 12:13:28 INFO - HikariPool-1 - Start completed.
+18-May-2021 12:13:29 INFO - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+18-May-2021 12:13:29 INFO - HHH000412: Hibernate Core {5.3.7.Final}
+18-May-2021 12:13:29 INFO - HHH000206: hibernate.properties not found
+18-May-2021 12:13:29 INFO - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+18-May-2021 12:13:29 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+18-May-2021 12:13:30 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+18-May-2021 12:13:30 INFO - Initializing ExecutorService 'applicationTaskExecutor'
+18-May-2021 12:13:30 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18-May-2021 12:13:31 INFO - Starting ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:13:31 INFO - Tomcat started on port(s): 8200 (http) with context path ''
+18-May-2021 12:15:14 INFO - Application shutdown requested.
+18-May-2021 12:15:14 INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+18-May-2021 12:15:14 INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+18-May-2021 12:15:14 INFO - HikariPool-1 - Shutdown initiated...
+18-May-2021 12:15:14 INFO - HikariPool-1 - Shutdown completed.
+18-May-2021 12:15:14 INFO - Pausing ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:15:14 INFO - Stopping service [Tomcat]
+18-May-2021 12:15:14 INFO - Stopping ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:15:14 INFO - Destroying ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:15:23 INFO - Fetching config from server at : http://localhost:1111
+18-May-2021 12:15:24 INFO - Located environment: name=UserMS, profiles=[default], label=null, version=d435ee8f06b0f76ea38de775e30a9b0056bab66f, state=null
+18-May-2021 12:15:24 INFO - Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='https://github.com/rajat12122/ConfigurationRepo.git/UserMS.properties'}, MapPropertySource {name='https://github.com/rajat12122/ConfigurationRepo.git/application.properties'}]}
+18-May-2021 12:15:24 INFO - Bootstrapping Spring Data repositories in DEFAULT mode.
+18-May-2021 12:15:24 INFO - Finished Spring Data repository scanning in 56ms. Found 4 repository interfaces.
+18-May-2021 12:15:24 INFO - BeanFactory id=75e1dc88-20e7-3197-ac8a-7444e0f4ee3d
+18-May-2021 12:15:24 INFO - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$58bd9157] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18-May-2021 12:15:24 INFO - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$74d79454] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18-May-2021 12:15:25 INFO - Tomcat initialized with port(s): 8200 (http)
+18-May-2021 12:15:25 INFO - Initializing ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:15:25 INFO - Starting service [Tomcat]
+18-May-2021 12:15:25 INFO - Starting Servlet engine: [Apache Tomcat/9.0.14]
+18-May-2021 12:15:25 INFO - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Users\NikitaKathy\Desktop\spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting\contents\sts-4.10.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/NikitaKathy/Desktop/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting/contents/sts-4.10.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin/server;C:/Users/NikitaKathy/Desktop/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting/contents/sts-4.10.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk-12.0.2\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\NikitaKathy\AppData\Local\Microsoft\WindowsApps;C:\Users\NikitaKathy\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\NikitaKathy\AppData\Roaming\npm;C:\Users\NikitaKathy\Desktop\spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting\contents\sts-4.10.0.RELEASE;;.]
+18-May-2021 12:15:25 INFO - Initializing Spring embedded WebApplicationContext
+18-May-2021 12:15:25 INFO - Root WebApplicationContext: initialization completed in 1471 ms
+18-May-2021 12:15:25 INFO - HikariPool-1 - Starting...
+18-May-2021 12:15:25 WARN - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+18-May-2021 12:15:26 INFO - HikariPool-1 - Start completed.
+18-May-2021 12:15:26 INFO - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+18-May-2021 12:15:26 INFO - HHH000412: Hibernate Core {5.3.7.Final}
+18-May-2021 12:15:26 INFO - HHH000206: hibernate.properties not found
+18-May-2021 12:15:26 INFO - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+18-May-2021 12:15:26 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+18-May-2021 12:15:27 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+18-May-2021 12:15:27 INFO - Initializing ExecutorService 'applicationTaskExecutor'
+18-May-2021 12:15:27 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18-May-2021 12:15:28 INFO - Starting ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:15:28 INFO - Tomcat started on port(s): 8200 (http) with context path ''
+18-May-2021 12:16:56 INFO - Application shutdown requested.
+18-May-2021 12:16:56 INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+18-May-2021 12:16:56 INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+18-May-2021 12:16:56 INFO - HikariPool-1 - Shutdown initiated...
+18-May-2021 12:16:56 INFO - HikariPool-1 - Shutdown completed.
+18-May-2021 12:16:56 INFO - Pausing ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:16:56 INFO - Stopping service [Tomcat]
+18-May-2021 12:16:56 INFO - Stopping ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:16:56 INFO - Destroying ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:17:49 INFO - Enter valid Values
+18-May-2021 12:17:54 INFO - Enter valid Values
+18-May-2021 12:18:43 INFO - Fetching config from server at : http://localhost:1111
+18-May-2021 12:18:43 INFO - Located environment: name=UserMS, profiles=[default], label=null, version=d435ee8f06b0f76ea38de775e30a9b0056bab66f, state=null
+18-May-2021 12:18:43 INFO - Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='https://github.com/rajat12122/ConfigurationRepo.git/UserMS.properties'}, MapPropertySource {name='https://github.com/rajat12122/ConfigurationRepo.git/application.properties'}]}
+18-May-2021 12:18:44 INFO - Bootstrapping Spring Data repositories in DEFAULT mode.
+18-May-2021 12:18:44 INFO - Finished Spring Data repository scanning in 50ms. Found 4 repository interfaces.
+18-May-2021 12:18:44 INFO - BeanFactory id=75e1dc88-20e7-3197-ac8a-7444e0f4ee3d
+18-May-2021 12:18:44 INFO - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b06fc3f7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18-May-2021 12:18:44 INFO - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$cc89c6f4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18-May-2021 12:18:45 INFO - Tomcat initialized with port(s): 8200 (http)
+18-May-2021 12:18:45 INFO - Initializing ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:18:45 INFO - Starting service [Tomcat]
+18-May-2021 12:18:45 INFO - Starting Servlet engine: [Apache Tomcat/9.0.14]
+18-May-2021 12:18:45 INFO - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Users\NikitaKathy\Desktop\spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting\contents\sts-4.10.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/NikitaKathy/Desktop/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting/contents/sts-4.10.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin/server;C:/Users/NikitaKathy/Desktop/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting/contents/sts-4.10.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk-12.0.2\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\NikitaKathy\AppData\Local\Microsoft\WindowsApps;C:\Users\NikitaKathy\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\NikitaKathy\AppData\Roaming\npm;C:\Users\NikitaKathy\Desktop\spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting\contents\sts-4.10.0.RELEASE;;.]
+18-May-2021 12:18:45 INFO - Initializing Spring embedded WebApplicationContext
+18-May-2021 12:18:45 INFO - Root WebApplicationContext: initialization completed in 1412 ms
+18-May-2021 12:18:45 INFO - HikariPool-1 - Starting...
+18-May-2021 12:18:45 WARN - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+18-May-2021 12:18:45 INFO - HikariPool-1 - Start completed.
+18-May-2021 12:18:45 INFO - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+18-May-2021 12:18:45 INFO - HHH000412: Hibernate Core {5.3.7.Final}
+18-May-2021 12:18:45 INFO - HHH000206: hibernate.properties not found
+18-May-2021 12:18:46 INFO - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+18-May-2021 12:18:46 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+18-May-2021 12:18:46 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+18-May-2021 12:18:47 INFO - Initializing ExecutorService 'applicationTaskExecutor'
+18-May-2021 12:18:47 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18-May-2021 12:18:47 INFO - Starting ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:18:47 INFO - Tomcat started on port(s): 8200 (http) with context path ''
+18-May-2021 12:19:05 INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18-May-2021 12:19:05 INFO - Initializing Servlet 'dispatcherServlet'
+18-May-2021 12:19:05 INFO - Completed initialization in 22 ms
+18-May-2021 12:19:05 INFO - Enter valid Values
+18-May-2021 12:19:55 INFO - Application shutdown requested.
+18-May-2021 12:19:55 INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+18-May-2021 12:19:55 INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+18-May-2021 12:19:55 INFO - HikariPool-1 - Shutdown initiated...
+18-May-2021 12:19:55 INFO - HikariPool-1 - Shutdown completed.
+18-May-2021 12:19:55 INFO - Pausing ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:19:55 INFO - Stopping service [Tomcat]
+18-May-2021 12:19:55 INFO - Destroying Spring FrameworkServlet 'dispatcherServlet'
+18-May-2021 12:19:55 INFO - Stopping ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:19:55 INFO - Destroying ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:20:03 INFO - Fetching config from server at : http://localhost:1111
+18-May-2021 12:20:03 INFO - Located environment: name=UserMS, profiles=[default], label=null, version=d435ee8f06b0f76ea38de775e30a9b0056bab66f, state=null
+18-May-2021 12:20:03 INFO - Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='https://github.com/rajat12122/ConfigurationRepo.git/UserMS.properties'}, MapPropertySource {name='https://github.com/rajat12122/ConfigurationRepo.git/application.properties'}]}
+18-May-2021 12:20:04 INFO - Bootstrapping Spring Data repositories in DEFAULT mode.
+18-May-2021 12:20:04 INFO - Finished Spring Data repository scanning in 65ms. Found 4 repository interfaces.
+18-May-2021 12:20:04 INFO - BeanFactory id=75e1dc88-20e7-3197-ac8a-7444e0f4ee3d
+18-May-2021 12:20:04 INFO - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$163f92a5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18-May-2021 12:20:04 INFO - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$325995a2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18-May-2021 12:20:04 INFO - Tomcat initialized with port(s): 8200 (http)
+18-May-2021 12:20:04 INFO - Initializing ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:20:05 INFO - Starting service [Tomcat]
+18-May-2021 12:20:05 INFO - Starting Servlet engine: [Apache Tomcat/9.0.14]
+18-May-2021 12:20:05 INFO - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Users\NikitaKathy\Desktop\spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting\contents\sts-4.10.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/NikitaKathy/Desktop/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting/contents/sts-4.10.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin/server;C:/Users/NikitaKathy/Desktop/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting/contents/sts-4.10.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk-12.0.2\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\NikitaKathy\AppData\Local\Microsoft\WindowsApps;C:\Users\NikitaKathy\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\NikitaKathy\AppData\Roaming\npm;C:\Users\NikitaKathy\Desktop\spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting\contents\sts-4.10.0.RELEASE;;.]
+18-May-2021 12:20:05 INFO - Initializing Spring embedded WebApplicationContext
+18-May-2021 12:20:05 INFO - Root WebApplicationContext: initialization completed in 1452 ms
+18-May-2021 12:20:05 INFO - HikariPool-1 - Starting...
+18-May-2021 12:20:05 WARN - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+18-May-2021 12:20:05 INFO - HikariPool-1 - Start completed.
+18-May-2021 12:20:05 INFO - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+18-May-2021 12:20:05 INFO - HHH000412: Hibernate Core {5.3.7.Final}
+18-May-2021 12:20:05 INFO - HHH000206: hibernate.properties not found
+18-May-2021 12:20:06 INFO - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+18-May-2021 12:20:06 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+18-May-2021 12:20:06 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+18-May-2021 12:20:07 INFO - Initializing ExecutorService 'applicationTaskExecutor'
+18-May-2021 12:20:07 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18-May-2021 12:20:07 INFO - Starting ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:20:07 INFO - Tomcat started on port(s): 8200 (http) with context path ''
+18-May-2021 12:20:21 INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18-May-2021 12:20:21 INFO - Initializing Servlet 'dispatcherServlet'
+18-May-2021 12:20:21 INFO - Completed initialization in 12 ms
+18-May-2021 12:20:21 INFO - Enter valid Values
+18-May-2021 12:20:21 INFO - Enter valid Values
+18-May-2021 12:21:41 INFO - Application shutdown requested.
+18-May-2021 12:21:41 INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+18-May-2021 12:21:41 INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+18-May-2021 12:21:41 INFO - HikariPool-1 - Shutdown initiated...
+18-May-2021 12:21:41 INFO - HikariPool-1 - Shutdown completed.
+18-May-2021 12:21:41 INFO - Pausing ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:21:41 INFO - Stopping service [Tomcat]
+18-May-2021 12:21:41 INFO - Destroying Spring FrameworkServlet 'dispatcherServlet'
+18-May-2021 12:21:41 INFO - Stopping ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:21:41 INFO - Destroying ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:21:49 INFO - Fetching config from server at : http://localhost:1111
+18-May-2021 12:21:49 INFO - Located environment: name=UserMS, profiles=[default], label=null, version=d435ee8f06b0f76ea38de775e30a9b0056bab66f, state=null
+18-May-2021 12:21:49 INFO - Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='https://github.com/rajat12122/ConfigurationRepo.git/UserMS.properties'}, MapPropertySource {name='https://github.com/rajat12122/ConfigurationRepo.git/application.properties'}]}
+18-May-2021 12:21:49 INFO - No active profile set, falling back to default profiles: default
+18-May-2021 12:21:50 INFO - Bootstrapping Spring Data repositories in DEFAULT mode.
+18-May-2021 12:21:50 INFO - Finished Spring Data repository scanning in 66ms. Found 4 repository interfaces.
+18-May-2021 12:21:50 INFO - BeanFactory id=75e1dc88-20e7-3197-ac8a-7444e0f4ee3d
+18-May-2021 12:21:50 INFO - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$99fa0d82] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18-May-2021 12:21:50 INFO - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$b614107f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18-May-2021 12:21:51 INFO - Tomcat initialized with port(s): 8200 (http)
+18-May-2021 12:21:51 INFO - Initializing ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:21:51 INFO - Starting service [Tomcat]
+18-May-2021 12:21:51 INFO - Starting Servlet engine: [Apache Tomcat/9.0.14]
+18-May-2021 12:21:51 INFO - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Users\NikitaKathy\Desktop\spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting\contents\sts-4.10.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/NikitaKathy/Desktop/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting/contents/sts-4.10.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin/server;C:/Users/NikitaKathy/Desktop/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting/contents/sts-4.10.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk-12.0.2\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\NikitaKathy\AppData\Local\Microsoft\WindowsApps;C:\Users\NikitaKathy\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\NikitaKathy\AppData\Roaming\npm;C:\Users\NikitaKathy\Desktop\spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting\contents\sts-4.10.0.RELEASE;;.]
+18-May-2021 12:21:51 INFO - Initializing Spring embedded WebApplicationContext
+18-May-2021 12:21:51 INFO - Root WebApplicationContext: initialization completed in 1677 ms
+18-May-2021 12:21:51 INFO - HikariPool-1 - Starting...
+18-May-2021 12:21:51 WARN - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+18-May-2021 12:21:51 INFO - HikariPool-1 - Start completed.
+18-May-2021 12:21:52 INFO - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+18-May-2021 12:21:52 INFO - HHH000412: Hibernate Core {5.3.7.Final}
+18-May-2021 12:21:52 INFO - HHH000206: hibernate.properties not found
+18-May-2021 12:21:52 INFO - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+18-May-2021 12:21:52 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+18-May-2021 12:21:53 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+18-May-2021 12:21:53 INFO - Initializing ExecutorService 'applicationTaskExecutor'
+18-May-2021 12:21:53 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18-May-2021 12:21:54 INFO - Starting ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:21:54 INFO - Tomcat started on port(s): 8200 (http) with context path ''
+18-May-2021 12:21:54 INFO - Started UserMsApplication in 6.14 seconds (JVM running for 7.14)
+18-May-2021 12:22:21 INFO - Application shutdown requested.
+18-May-2021 12:22:21 INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+18-May-2021 12:22:21 INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+18-May-2021 12:22:21 INFO - HikariPool-1 - Shutdown initiated...
+18-May-2021 12:22:21 INFO - HikariPool-1 - Shutdown completed.
+18-May-2021 12:22:21 INFO - Pausing ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:22:21 INFO - Stopping service [Tomcat]
+18-May-2021 12:22:21 INFO - Stopping ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:22:21 INFO - Destroying ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:22:34 INFO - Fetching config from server at : http://localhost:1111
+18-May-2021 12:22:34 INFO - Located environment: name=UserMS, profiles=[default], label=null, version=d435ee8f06b0f76ea38de775e30a9b0056bab66f, state=null
+18-May-2021 12:22:34 INFO - Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='https://github.com/rajat12122/ConfigurationRepo.git/UserMS.properties'}, MapPropertySource {name='https://github.com/rajat12122/ConfigurationRepo.git/application.properties'}]}
+18-May-2021 12:22:34 INFO - No active profile set, falling back to default profiles: default
+18-May-2021 12:22:35 INFO - Bootstrapping Spring Data repositories in DEFAULT mode.
+18-May-2021 12:22:35 INFO - Finished Spring Data repository scanning in 75ms. Found 4 repository interfaces.
+18-May-2021 12:22:35 INFO - BeanFactory id=75e1dc88-20e7-3197-ac8a-7444e0f4ee3d
+18-May-2021 12:22:35 INFO - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f873366c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18-May-2021 12:22:35 INFO - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$148d3969] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18-May-2021 12:22:36 INFO - Tomcat initialized with port(s): 8200 (http)
+18-May-2021 12:22:36 INFO - Initializing ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:22:36 INFO - Starting service [Tomcat]
+18-May-2021 12:22:36 INFO - Starting Servlet engine: [Apache Tomcat/9.0.14]
+18-May-2021 12:22:36 INFO - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Users\NikitaKathy\Desktop\spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting\contents\sts-4.10.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/NikitaKathy/Desktop/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting/contents/sts-4.10.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin/server;C:/Users/NikitaKathy/Desktop/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting/contents/sts-4.10.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk-12.0.2\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\NikitaKathy\AppData\Local\Microsoft\WindowsApps;C:\Users\NikitaKathy\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\NikitaKathy\AppData\Roaming\npm;C:\Users\NikitaKathy\Desktop\spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting\contents\sts-4.10.0.RELEASE;;.]
+18-May-2021 12:22:36 INFO - Initializing Spring embedded WebApplicationContext
+18-May-2021 12:22:36 INFO - Root WebApplicationContext: initialization completed in 1469 ms
+18-May-2021 12:22:36 INFO - HikariPool-1 - Starting...
+18-May-2021 12:22:36 WARN - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+18-May-2021 12:22:36 INFO - HikariPool-1 - Start completed.
+18-May-2021 12:22:36 INFO - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+18-May-2021 12:22:36 INFO - HHH000412: Hibernate Core {5.3.7.Final}
+18-May-2021 12:22:36 INFO - HHH000206: hibernate.properties not found
+18-May-2021 12:22:37 INFO - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+18-May-2021 12:22:37 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+18-May-2021 12:22:37 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+18-May-2021 12:22:38 INFO - Initializing ExecutorService 'applicationTaskExecutor'
+18-May-2021 12:22:38 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18-May-2021 12:22:39 INFO - Starting ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:22:39 INFO - Tomcat started on port(s): 8200 (http) with context path ''
+18-May-2021 12:22:39 INFO - Started UserMsApplication in 6.093 seconds (JVM running for 7.138)
+18-May-2021 12:25:06 INFO - Application shutdown requested.
+18-May-2021 12:25:06 INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+18-May-2021 12:25:06 INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+18-May-2021 12:25:06 INFO - HikariPool-1 - Shutdown initiated...
+18-May-2021 12:25:06 INFO - HikariPool-1 - Shutdown completed.
+18-May-2021 12:25:06 INFO - Pausing ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:25:06 INFO - Stopping service [Tomcat]
+18-May-2021 12:25:06 INFO - Stopping ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:25:06 INFO - Destroying ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:30:13 INFO - Fetching config from server at : http://localhost:1111
+18-May-2021 12:30:14 INFO - Located environment: name=UserMS, profiles=[default], label=null, version=d435ee8f06b0f76ea38de775e30a9b0056bab66f, state=null
+18-May-2021 12:30:14 INFO - Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='https://github.com/rajat12122/ConfigurationRepo.git/UserMS.properties'}, MapPropertySource {name='https://github.com/rajat12122/ConfigurationRepo.git/application.properties'}]}
+18-May-2021 12:30:14 INFO - No active profile set, falling back to default profiles: default
+18-May-2021 12:30:14 INFO - Bootstrapping Spring Data repositories in DEFAULT mode.
+18-May-2021 12:30:14 INFO - Finished Spring Data repository scanning in 56ms. Found 4 repository interfaces.
+18-May-2021 12:30:15 INFO - BeanFactory id=75e1dc88-20e7-3197-ac8a-7444e0f4ee3d
+18-May-2021 12:30:15 INFO - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e3ec3db6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18-May-2021 12:30:15 INFO - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$640b3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18-May-2021 12:30:15 INFO - Tomcat initialized with port(s): 8200 (http)
+18-May-2021 12:30:15 INFO - Initializing ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:30:15 INFO - Starting service [Tomcat]
+18-May-2021 12:30:15 INFO - Starting Servlet engine: [Apache Tomcat/9.0.14]
+18-May-2021 12:30:15 INFO - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Users\NikitaKathy\Desktop\spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting\contents\sts-4.10.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/NikitaKathy/Desktop/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting/contents/sts-4.10.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin/server;C:/Users/NikitaKathy/Desktop/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting/contents/sts-4.10.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk-12.0.2\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\NikitaKathy\AppData\Local\Microsoft\WindowsApps;C:\Users\NikitaKathy\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\NikitaKathy\AppData\Roaming\npm;C:\Users\NikitaKathy\Desktop\spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting\contents\sts-4.10.0.RELEASE;;.]
+18-May-2021 12:30:15 INFO - Initializing Spring embedded WebApplicationContext
+18-May-2021 12:30:15 INFO - Root WebApplicationContext: initialization completed in 1482 ms
+18-May-2021 12:30:16 INFO - HikariPool-1 - Starting...
+18-May-2021 12:30:16 WARN - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+18-May-2021 12:30:16 INFO - HikariPool-1 - Start completed.
+18-May-2021 12:30:16 INFO - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+18-May-2021 12:30:16 INFO - HHH000412: Hibernate Core {5.3.7.Final}
+18-May-2021 12:30:16 INFO - HHH000206: hibernate.properties not found
+18-May-2021 12:30:16 INFO - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+18-May-2021 12:30:16 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+18-May-2021 12:30:17 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+18-May-2021 12:30:18 INFO - Initializing ExecutorService 'applicationTaskExecutor'
+18-May-2021 12:30:18 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18-May-2021 12:30:18 INFO - Starting ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:30:18 INFO - Tomcat started on port(s): 8200 (http) with context path ''
+18-May-2021 12:30:18 INFO - Started UserMsApplication in 5.974 seconds (JVM running for 6.996)
+18-May-2021 12:32:00 INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18-May-2021 12:32:00 INFO - Initializing Servlet 'dispatcherServlet'
+18-May-2021 12:32:00 INFO - Completed initialization in 15 ms
+18-May-2021 12:32:00 INFO - Enter valid Values
+18-May-2021 12:32:00 INFO - Enter valid Values
+18-May-2021 12:32:12 INFO - HHH000397: Using ASTQueryTranslatorFactory
+18-May-2021 12:33:03 INFO - Application shutdown requested.
+18-May-2021 12:33:03 INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+18-May-2021 12:33:03 INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+18-May-2021 12:33:03 INFO - HikariPool-1 - Shutdown initiated...
+18-May-2021 12:33:03 INFO - HikariPool-1 - Shutdown completed.
+18-May-2021 12:33:03 INFO - Pausing ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:33:03 INFO - Stopping service [Tomcat]
+18-May-2021 12:33:03 INFO - Destroying Spring FrameworkServlet 'dispatcherServlet'
+18-May-2021 12:33:03 INFO - Stopping ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:33:03 INFO - Destroying ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:33:15 INFO - Fetching config from server at : http://localhost:1111
+18-May-2021 12:33:16 INFO - Located environment: name=UserMS, profiles=[default], label=null, version=d435ee8f06b0f76ea38de775e30a9b0056bab66f, state=null
+18-May-2021 12:33:16 INFO - Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='https://github.com/rajat12122/ConfigurationRepo.git/UserMS.properties'}, MapPropertySource {name='https://github.com/rajat12122/ConfigurationRepo.git/application.properties'}]}
+18-May-2021 12:33:16 INFO - No active profile set, falling back to default profiles: default
+18-May-2021 12:33:16 INFO - Bootstrapping Spring Data repositories in DEFAULT mode.
+18-May-2021 12:33:16 INFO - Finished Spring Data repository scanning in 54ms. Found 4 repository interfaces.
+18-May-2021 12:33:16 INFO - BeanFactory id=75e1dc88-20e7-3197-ac8a-7444e0f4ee3d
+18-May-2021 12:33:16 INFO - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e3ec3db6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18-May-2021 12:33:16 INFO - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$640b3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18-May-2021 12:33:17 INFO - Tomcat initialized with port(s): 8200 (http)
+18-May-2021 12:33:17 INFO - Initializing ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:33:17 INFO - Starting service [Tomcat]
+18-May-2021 12:33:17 INFO - Starting Servlet engine: [Apache Tomcat/9.0.14]
+18-May-2021 12:33:17 INFO - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Users\NikitaKathy\Desktop\spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting\contents\sts-4.10.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/NikitaKathy/Desktop/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting/contents/sts-4.10.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin/server;C:/Users/NikitaKathy/Desktop/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting/contents/sts-4.10.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk-12.0.2\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\NikitaKathy\AppData\Local\Microsoft\WindowsApps;C:\Users\NikitaKathy\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\NikitaKathy\AppData\Roaming\npm;C:\Users\NikitaKathy\Desktop\spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting\contents\sts-4.10.0.RELEASE;;.]
+18-May-2021 12:33:17 INFO - Initializing Spring embedded WebApplicationContext
+18-May-2021 12:33:17 INFO - Root WebApplicationContext: initialization completed in 1410 ms
+18-May-2021 12:33:17 INFO - HikariPool-1 - Starting...
+18-May-2021 12:33:17 WARN - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+18-May-2021 12:33:18 INFO - HikariPool-1 - Start completed.
+18-May-2021 12:33:18 INFO - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+18-May-2021 12:33:18 INFO - HHH000412: Hibernate Core {5.3.7.Final}
+18-May-2021 12:33:18 INFO - HHH000206: hibernate.properties not found
+18-May-2021 12:33:18 INFO - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+18-May-2021 12:33:18 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+18-May-2021 12:33:19 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+18-May-2021 12:33:19 INFO - Initializing ExecutorService 'applicationTaskExecutor'
+18-May-2021 12:33:19 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18-May-2021 12:33:20 INFO - Starting ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:33:20 INFO - Tomcat started on port(s): 8200 (http) with context path ''
+18-May-2021 12:33:20 INFO - Started UserMsApplication in 5.721 seconds (JVM running for 6.629)
+18-May-2021 12:33:57 INFO - Application shutdown requested.
+18-May-2021 12:33:57 INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+18-May-2021 12:33:57 INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+18-May-2021 12:33:57 INFO - HikariPool-1 - Shutdown initiated...
+18-May-2021 12:33:57 INFO - HikariPool-1 - Shutdown completed.
+18-May-2021 12:33:57 INFO - Pausing ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:33:57 INFO - Stopping service [Tomcat]
+18-May-2021 12:33:57 INFO - Stopping ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:33:57 INFO - Destroying ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:34:04 INFO - Fetching config from server at : http://localhost:1111
+18-May-2021 12:34:04 INFO - Located environment: name=UserMS, profiles=[default], label=null, version=d435ee8f06b0f76ea38de775e30a9b0056bab66f, state=null
+18-May-2021 12:34:04 INFO - Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='https://github.com/rajat12122/ConfigurationRepo.git/UserMS.properties'}, MapPropertySource {name='https://github.com/rajat12122/ConfigurationRepo.git/application.properties'}]}
+18-May-2021 12:34:04 INFO - No active profile set, falling back to default profiles: default
+18-May-2021 12:34:05 INFO - Bootstrapping Spring Data repositories in DEFAULT mode.
+18-May-2021 12:34:05 INFO - Finished Spring Data repository scanning in 54ms. Found 4 repository interfaces.
+18-May-2021 12:34:05 INFO - BeanFactory id=75e1dc88-20e7-3197-ac8a-7444e0f4ee3d
+18-May-2021 12:34:05 INFO - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$20708bcc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18-May-2021 12:34:05 INFO - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$3c8a8ec9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18-May-2021 12:34:05 INFO - Tomcat initialized with port(s): 8200 (http)
+18-May-2021 12:34:05 INFO - Initializing ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:34:05 INFO - Starting service [Tomcat]
+18-May-2021 12:34:05 INFO - Starting Servlet engine: [Apache Tomcat/9.0.14]
+18-May-2021 12:34:05 INFO - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Users\NikitaKathy\Desktop\spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting\contents\sts-4.10.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/NikitaKathy/Desktop/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting/contents/sts-4.10.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin/server;C:/Users/NikitaKathy/Desktop/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting/contents/sts-4.10.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk-12.0.2\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\NikitaKathy\AppData\Local\Microsoft\WindowsApps;C:\Users\NikitaKathy\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\NikitaKathy\AppData\Roaming\npm;C:\Users\NikitaKathy\Desktop\spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-win32.win32.x86_64.self-extracting\contents\sts-4.10.0.RELEASE;;.]
+18-May-2021 12:34:06 INFO - Initializing Spring embedded WebApplicationContext
+18-May-2021 12:34:06 INFO - Root WebApplicationContext: initialization completed in 1445 ms
+18-May-2021 12:34:06 INFO - HikariPool-1 - Starting...
+18-May-2021 12:34:06 WARN - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+18-May-2021 12:34:06 INFO - HikariPool-1 - Start completed.
+18-May-2021 12:34:06 INFO - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+18-May-2021 12:34:06 INFO - HHH000412: Hibernate Core {5.3.7.Final}
+18-May-2021 12:34:06 INFO - HHH000206: hibernate.properties not found
+18-May-2021 12:34:06 INFO - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+18-May-2021 12:34:07 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+18-May-2021 12:34:07 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+18-May-2021 12:34:08 INFO - Initializing ExecutorService 'applicationTaskExecutor'
+18-May-2021 12:34:08 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18-May-2021 12:34:08 INFO - Starting ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:34:08 INFO - Tomcat started on port(s): 8200 (http) with context path ''
+18-May-2021 12:34:08 INFO - Started UserMsApplication in 5.848 seconds (JVM running for 6.853)
+18-May-2021 12:34:24 INFO - Application shutdown requested.
+18-May-2021 12:34:24 INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+18-May-2021 12:34:24 INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+18-May-2021 12:34:24 INFO - HikariPool-1 - Shutdown initiated...
+18-May-2021 12:34:24 INFO - HikariPool-1 - Shutdown completed.
+18-May-2021 12:34:24 INFO - Pausing ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:34:24 INFO - Stopping service [Tomcat]
+18-May-2021 12:34:24 INFO - Stopping ProtocolHandler ["http-nio-8200"]
+18-May-2021 12:34:24 INFO - Destroying ProtocolHandler ["http-nio-8200"]

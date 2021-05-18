@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -50,6 +52,8 @@ public class OrderServiceImpl implements OrderService {
 			dtoList.add(odto);			
 		});
 		if(dtoList.isEmpty()) throw new OrderMsException("No orders available");
+		Logger logger = LogManager.getLogger(this.getClass());
+		logger.info("Orders displayed");
 		return dtoList;
 	}
 
