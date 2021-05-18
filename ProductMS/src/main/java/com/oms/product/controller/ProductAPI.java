@@ -3,6 +3,7 @@ package com.oms.product.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -17,11 +18,13 @@ import com.oms.product.dto.ProductDTO;
 import com.oms.product.service.ProductService;
 
 @RestController
-//@RequestMapping("/prodMs")
 public class ProductAPI {
 	
 	@Autowired
 	private ProductService productService;
+	
+	@Autowired
+	private Environment environment;
 	
 	@PostMapping(value = "/prodMS/addProduct")
 	public ResponseEntity<String> addProduct(@RequestBody ProductDTO prod){
@@ -32,7 +35,7 @@ public class ProductAPI {
 		}
 		catch(Exception e)
 		{
-			return new ResponseEntity<String>(e.getMessage(),HttpStatus.UNAUTHORIZED);
+			return new ResponseEntity<String>(environment.getProperty(e.getMessage()),HttpStatus.UNAUTHORIZED);
 		}
 		
 	}
@@ -47,7 +50,7 @@ public class ProductAPI {
 		}
 		catch(Exception e)
 		{
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage(), e);
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND,environment.getProperty(e.getMessage()), e);
 		}
 	}
 	
@@ -60,7 +63,7 @@ public class ProductAPI {
 		}
 		catch(Exception e)
 		{
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage(), e);
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND,environment.getProperty(e.getMessage()), e);
 		}
 	}
 	
@@ -74,7 +77,7 @@ public class ProductAPI {
 		}
 		catch(Exception e)
 		{
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage(), e);
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND,environment.getProperty(e.getMessage()), e);
 		}
 	}
 	
@@ -87,7 +90,7 @@ public class ProductAPI {
 		}
 		catch(Exception e)
 		{
-			return new ResponseEntity<String>(e.getMessage(),HttpStatus.NOT_FOUND);
+			return new ResponseEntity<String>(environment.getProperty(e.getMessage()),HttpStatus.NOT_FOUND);
 		}
 	}
 

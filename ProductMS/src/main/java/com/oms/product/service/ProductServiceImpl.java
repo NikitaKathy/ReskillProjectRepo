@@ -34,7 +34,7 @@ public class ProductServiceImpl implements ProductService {
 		Product product = productRepository.findByProductName(productDTO.getProductName());
 		
 		if(product != null)
-			throw new ProductMsException("Product already exists");
+			throw new ProductMsException("Service.PRODUCT_ALREADY_EXISTS");
 		
 		product = new Product();
 		
@@ -62,7 +62,7 @@ public class ProductServiceImpl implements ProductService {
 		Product product = productRepository.findByProductName(name);
 		
 		if(product == null)
-			throw new ProductMsException("Product Doesn't exist");
+			throw new ProductMsException("Service.PRODUCT_DOES_NOT_EXISTS");
 		
 		ProductDTO productDTO = new ProductDTO();
 		
@@ -86,7 +86,7 @@ public class ProductServiceImpl implements ProductService {
 		Product product = productRepository.findByProdId(id);
 		
 		if(product == null)
-			throw new ProductMsException("Product Doesn't exist");
+			throw new ProductMsException("Service.PRODUCT_DOES_NOT_EXISTS");
 		
 		ProductDTO productDTO = new ProductDTO();
 		
@@ -110,7 +110,7 @@ public class ProductServiceImpl implements ProductService {
 		Product product = productRepository.findByProdId(id);
 		
 		if(product == null)
-			throw new ProductMsException("Cannot delete the product that does not exist");
+			throw new ProductMsException("Service.CANNOT_DELETE_PRODUCT");
 		
 		productRepository.delete(product);
 		
@@ -124,7 +124,7 @@ public class ProductServiceImpl implements ProductService {
 		List<Product> list = productRepository.findByCategory(category);
 		
 		if(list.isEmpty())
-			throw new ProductMsException("No products for the specified category");
+			throw new ProductMsException("Service.CATEGORY_ERROR");
 		
 		List<ProductDTO> li = new ArrayList<>();
 		

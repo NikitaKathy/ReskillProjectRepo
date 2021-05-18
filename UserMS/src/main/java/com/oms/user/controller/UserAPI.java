@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -14,11 +15,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.server.ResponseStatusException;
-
 
 import com.oms.user.dto.BuyerDTO;
 import com.oms.user.dto.CartDTO;
@@ -37,16 +36,20 @@ public class UserAPI {
 	@Autowired
 	DiscoveryClient client;
 	
+	@Autowired
+	Environment environment;
+	
 	@PostMapping(value = "/userMS/buyer/register")
 	public ResponseEntity<String> registerBuyer(@RequestBody BuyerDTO buyerDto){
 		
 		try {
-		String s = userServiceNew.buyerRegistration(buyerDto);
+		String s ="Buyer registered successfully with buyer Id : " + userServiceNew.buyerRegistration(buyerDto);
 		return new ResponseEntity<String>(s,HttpStatus.OK);
 		}
 		catch(UserMsException e)
 		{
-			return new ResponseEntity<String>(e.getMessage(),HttpStatus.EXPECTATION_FAILED);
+			String s = environment.getProperty(e.getMessage());
+			return new ResponseEntity<String>(s,HttpStatus.EXPECTATION_FAILED);
 		}
 	}
 	
@@ -54,12 +57,12 @@ public class UserAPI {
 	public ResponseEntity<String> registerSeller(@RequestBody SellerDTO sellerDto){
 		
 		try {
-		String s = userServiceNew.sellerRegistration(sellerDto);
+		String s ="Seller registered successfully with seller Id : "+ userServiceNew.sellerRegistration(sellerDto);
 		return new ResponseEntity<String>(s,HttpStatus.OK);
 		}
 		catch(UserMsException e)
 		{
-			return new ResponseEntity<String>(e.getMessage(),HttpStatus.EXPECTATION_FAILED);
+			return new ResponseEntity<String>(environment.getProperty(e.getMessage()),HttpStatus.EXPECTATION_FAILED);
 		}
 
 	}
