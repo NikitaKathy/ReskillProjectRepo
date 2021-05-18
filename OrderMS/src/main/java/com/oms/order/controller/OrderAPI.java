@@ -1,9 +1,12 @@
 package com.oms.order.controller;
 
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,6 +32,9 @@ public class OrderAPI {
 	@Autowired
 	private OrderService orderService;
 	
+	@Autowired
+	DiscoveryClient client;
+	
 	@PostMapping(value = "/placeOrder/{buyerId}")
 	public ResponseEntity<String> placeOrder(@PathVariable String buyerId, @RequestBody OrderDTO order){
 		
@@ -40,8 +46,12 @@ public class OrderAPI {
 				    new TypeReference<List<CartDTO>>(){}
 				);
 			
+			List<ServiceInstance> instances=client.getInstances("PRODUCTMS");
+			ServiceInstance instance=instances.get(0);
+			URI productUri = instance.getUri();
+			
 			cartList.forEach(item ->{
-				ProductDTO prod = new RestTemplate().getForObject("http://localhost:8100/prodMs/getById/" +item.getProdId(),ProductDTO.class) ; //getByProdId/{productId}
+				ProductDTO prod = new RestTemplate().getForObject(productUri+"/prodMs/getById/" +item.getProdId(),ProductDTO.class) ; //getByProdId/{productId}
 				System.out.println(prod.getDescription());
 				productList.add(prod);
 			});

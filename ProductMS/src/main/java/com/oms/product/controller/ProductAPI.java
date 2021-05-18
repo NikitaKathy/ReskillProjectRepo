@@ -18,7 +18,7 @@ import com.oms.product.dto.ProductDTO;
 import com.oms.product.service.ProductService;
 
 @RestController
-@RequestMapping(value = "/prodMs")
+@RequestMapping("/prodMs")
 public class ProductAPI {
 	
 	@Autowired
@@ -41,6 +41,7 @@ public class ProductAPI {
 	@GetMapping(value = "/getByName/{name}")
 	public ResponseEntity<ProductDTO> getByProductName(@PathVariable String name)
 	{
+		System.out.println("Entered here");
 		try {
 			ProductDTO productDTO = productService.getProductByName(name);
 			return new ResponseEntity<ProductDTO>(productDTO,HttpStatus.OK);
@@ -67,6 +68,7 @@ public class ProductAPI {
 	@GetMapping(value = "/getByCategory/{name}")
 	public ResponseEntity<List<ProductDTO>> getByProductCategory(@PathVariable String name)
 	{
+		System.out.println("Entered here");
 		try {
 			List<ProductDTO> productDTO = productService.getProductByCategory(name);
 			return new ResponseEntity<List<ProductDTO>>(productDTO,HttpStatus.OK);
