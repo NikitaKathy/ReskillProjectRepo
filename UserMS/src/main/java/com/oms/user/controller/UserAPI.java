@@ -137,8 +137,8 @@ public class UserAPI {
 		}
 	}
 	
-	@PostMapping(value = "/userMS/buyer/cart/add/{buyerId}/{prodName}/{quantity}")
-	public ResponseEntity<String> addProductToCart(@PathVariable String buyerId, @PathVariable String prodName, @PathVariable Integer quantity) throws UserMsException
+	@PostMapping(value = "/userMS/buyer/cart/add/{buyerId}/{prodId}/{quantity}")
+	public ResponseEntity<String> addProductToCart(@PathVariable String buyerId, @PathVariable String prodId, @PathVariable Integer quantity) throws UserMsException
 	{
 		try {
 		List<ServiceInstance> instances=client.getInstances("PRODUCTMS");
@@ -147,7 +147,7 @@ public class UserAPI {
 		System.out.println(productUri);
 		
 		 
-		ProductDTO product = new RestTemplate().getForObject(productUri+"/prodMS/getByName/"+prodName, ProductDTO.class);
+		ProductDTO product = new RestTemplate().getForObject(productUri+"/prodMS/getById/"+prodId, ProductDTO.class);
 		System.out.println(product);
 		System.out.println(product instanceof ProductDTO);
 		String msg = userServiceNew.cartService(product.getProdId(), buyerId, quantity);
