@@ -3,7 +3,6 @@ package com.oms.product.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,8 +26,6 @@ public class ProductAPI {
 	@Autowired
 	private Environment environment;
 	
-	@Value("${product.uri}")
-	String productUri;
 	
 	@PostMapping(value = "/prodMS/addProduct")
 	public ResponseEntity<String> addProduct(@RequestBody ProductDTO prod){

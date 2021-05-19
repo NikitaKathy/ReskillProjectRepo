@@ -133,7 +133,7 @@ public class UserAPI {
 			String newMsg = "There was some error";
 			if(e.getMessage().equals("404 null"))
 			{
-				newMsg = "There are no PRODUCTS for the given product name";
+				newMsg = "There are no PRODUCTS for the given product ID";
 			}
 			throw new ResponseStatusException(HttpStatus.NOT_FOUND,newMsg,e);
 		}
@@ -161,7 +161,7 @@ public class UserAPI {
 			String newMsg = "There was some error";
 			if(e.getMessage().equals("404 null"))
 			{
-				newMsg = "There are no PRODUCTS for the given product name";
+				newMsg = "There are no PRODUCTS for the given product ID";
 			}
 			throw new ResponseStatusException(HttpStatus.NOT_FOUND,newMsg,e);
 		}

@@ -76,7 +76,12 @@ public class OrderAPI {
 		}
 		catch(Exception e)
 		{
-			return new ResponseEntity<>(e.getMessage(),HttpStatus.UNAUTHORIZED);
+			String newMsg = "There was some error";
+			if(e.getMessage().equals("404 null"))
+			{
+				newMsg = "Error while placing the order";
+			}
+			return new ResponseEntity<>(newMsg,HttpStatus.UNAUTHORIZED);
 		}		
 		
 	}
@@ -147,7 +152,12 @@ public class OrderAPI {
 		}
 		catch(Exception e)
 		{
-			return new ResponseEntity<>(e.getMessage(),HttpStatus.UNAUTHORIZED);
+			String newMsg = "There was some error";
+			if(e.getMessage().equals("404 null"))
+			{
+				newMsg = "There are no PRODUCTS for the given product ID";
+			}
+			return new ResponseEntity<>(newMsg,HttpStatus.UNAUTHORIZED);
 		}		
 	}
 	
@@ -167,7 +177,12 @@ public class OrderAPI {
 		}
 		catch(Exception e)
 		{
-			return new ResponseEntity<>(e.getMessage(),HttpStatus.UNAUTHORIZED);
+			String newMsg = "There was some error";
+			if(e.getMessage().equals("404 null"))
+			{
+				newMsg = "There are no PRODUCTS for the given product ID";
+			}
+			return new ResponseEntity<>(newMsg,HttpStatus.UNAUTHORIZED);
 		}		
 	}
 	
