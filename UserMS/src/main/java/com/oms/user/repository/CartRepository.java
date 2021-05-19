@@ -11,5 +11,9 @@ public interface CartRepository extends CrudRepository<Cart, CustomPK> {
 	
 	
 	public List<Cart> findByCustomPKBuyerId(String id); 
+	
+	public void deleteByCustomPKBuyerIdAndCustomPKProdId(String buyId,String prodId);
+	
+	public Cart findByCustomPKBuyerIdAndCustomPKProdId(String buyId,String ProdId);
 
 }
