@@ -105,5 +105,18 @@ public class ProductAPI {
 			throw new ResponseStatusException(HttpStatus.NOT_FOUND,environment.getProperty(e.getMessage()), e);
 		}		
 	}
+	
+	@GetMapping(value = "/prodMS/viewAllProducts")
+	public ResponseEntity<List<ProductDTO>> viewAllProducts()
+	{
+		try {
+			List<ProductDTO> list = productService.viewAllProducts();
+			return new ResponseEntity<>(list,HttpStatus.OK);
+		}
+		catch(Exception e)
+		{
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND,e.getMessage(),e);
+		}
+	}
 
 }

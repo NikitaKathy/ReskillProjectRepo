@@ -161,5 +161,34 @@ public class ProductServiceImpl implements ProductService {
 		return false;		
 	}
 
+	@Override
+	public List<ProductDTO> viewAllProducts() throws ProductMsException {
+		
+		List<Product> list = productRepository.findAll();
+		
+		if(list.isEmpty())
+			throw new ProductMsException("There are no products to be shown");
+		
+		List<ProductDTO> li = new ArrayList<>();
+		
+		list.forEach(l -> {
+			ProductDTO prod = new ProductDTO();
+			prod.setCategory(l.getCategory());
+			prod.setDescription(l.getDescription());
+			prod.setImage(l.getImage());
+			prod.setPrice(l.getPrice());
+			prod.setProdId(l.getProdId());
+			prod.setProductName(l.getProductName());
+			prod.setProductRating(l.getProductRating());
+			prod.setSellerId(l.getSellerId());
+			prod.setStock(l.getStock());
+			prod.setSubCategory(l.getSubCategory());
+			
+			li.add(prod);
+		});
+		
+		return li;
+	}
+
 
 }
