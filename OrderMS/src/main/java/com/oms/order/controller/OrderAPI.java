@@ -1,11 +1,10 @@
 package com.oms.order.controller;
 
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -34,13 +33,19 @@ public class OrderAPI {
 	@Autowired
 	DiscoveryClient client;
 	
+	@Value("${user.uri}")
+	String userUri;
+	
+	@Value("${product.uri}")
+	String productUri;
+	
 	@PostMapping(value = "/orderMS/placeOrder/{buyerId}")
 	public ResponseEntity<String> placeOrder(@PathVariable String buyerId, @RequestBody OrderDTO order){
 		
 		try {
-			List<ServiceInstance> userInstances=client.getInstances("USERMS");
-			ServiceInstance userInstance=userInstances.get(0);
-			URI userUri = userInstance.getUri();
+//			List<ServiceInstance> userInstances=client.getInstances("USERMS");
+//			ServiceInstance userInstance=userInstances.get(0);
+//			URI userUri = userInstance.getUri();
 			
 			ObjectMapper mapper = new ObjectMapper();
 			List<ProductDTO> productList = new ArrayList<>();
@@ -49,9 +54,9 @@ public class OrderAPI {
 				    new TypeReference<List<CartDTO>>(){}
 				);
 			
-			List<ServiceInstance> instances=client.getInstances("PRODUCTMS");
-			ServiceInstance instance=instances.get(0);
-			URI productUri = instance.getUri();
+//			List<ServiceInstance> instances=client.getInstances("PRODUCTMS");
+//			ServiceInstance instance=instances.get(0);
+//			URI productUri = instance.getUri();
 			
 			cartList.forEach(item ->{
 				ProductDTO prod = new RestTemplate().getForObject(productUri+"/prodMS/getById/" +item.getProdId(),ProductDTO.class) ; //getByProdId/{productId}
@@ -132,9 +137,9 @@ public class OrderAPI {
 		
 		try {
 			
-			List<ServiceInstance> userInstances=client.getInstances("USERMS");
-			ServiceInstance userInstance=userInstances.get(0);
-			URI userUri = userInstance.getUri();
+//			List<ServiceInstance> userInstances=client.getInstances("USERMS");
+//			ServiceInstance userInstance=userInstances.get(0);
+//			URI userUri = userInstance.getUri();
 			
 			String successMsg = new RestTemplate().postForObject(userUri+"/userMS/buyer/cart/add/"+buyerId+"/"+prodId+"/"+quantity, null, String.class);
 
@@ -151,13 +156,13 @@ public class OrderAPI {
 		
 		try {
 			
-			List<ServiceInstance> userInstances=client.getInstances("USERMS");
-			ServiceInstance userInstance=userInstances.get(0);
-			URI userUri = userInstance.getUri();
-			System.out.println(userUri);
+//			List<ServiceInstance> userInstances=client.getInstances("USERMS");
+//			ServiceInstance userInstance=userInstances.get(0);
+//			URI userUri = userInstance.getUri();
+//			System.out.println(userUri);
 			
 			String successMsg = new RestTemplate().postForObject(userUri+"/userMS/buyer/cart/remove/"+buyerId+"/"+prodId, null, String.class);
-			System.out.println(successMsg);
+			
 			return new ResponseEntity<>(successMsg,HttpStatus.ACCEPTED);
 		}
 		catch(Exception e)
