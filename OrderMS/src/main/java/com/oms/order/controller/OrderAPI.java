@@ -61,7 +61,9 @@ public class OrderAPI {
 			String orderId = orderService.placeOrder(productList,cartList,order);
 			cartList.forEach(item->{
 				new RestTemplate().getForObject(productUri+"/prodMS/updateStock/" +item.getProdId()+"/"+item.getQuantity(), boolean.class) ;
-			});					
+				new RestTemplate().postForObject(userUri+"/userMS/buyer/cart/remove/"+buyerId+"/"+item.getProdId(),null, String.class);
+			});			
+			
 			
 			return new ResponseEntity<>(orderId,HttpStatus.ACCEPTED);
 		}
@@ -143,16 +145,17 @@ public class OrderAPI {
 	}
 	
 	@PostMapping(value = "/orderMS/removeFromCart/{buyerId}/{prodId}")
-	public ResponseEntity<String> addToCart(@PathVariable String buyerId, @PathVariable String prodId){
+	public ResponseEntity<String> removeFromCart(@PathVariable String buyerId, @PathVariable String prodId){
 		
 		try {
 			
 			List<ServiceInstance> userInstances=client.getInstances("USERMS");
 			ServiceInstance userInstance=userInstances.get(0);
 			URI userUri = userInstance.getUri();
+			System.out.println(userUri);
 			
 			String successMsg = new RestTemplate().postForObject(userUri+"/userMS/buyer/cart/remove/"+buyerId+"/"+prodId, null, String.class);
-
+			System.out.println(successMsg);
 			return new ResponseEntity<>(successMsg,HttpStatus.ACCEPTED);
 		}
 		catch(Exception e)
