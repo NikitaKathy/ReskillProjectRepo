@@ -185,4 +185,22 @@ public class UserAPI {
 		}
 	}
 	
+	@GetMapping(value = "/userMS/buyer/cart/remove/{buyerId}/{prodId}")
+	public ResponseEntity<String> removeFromCart(@PathVariable String buyerId,@PathVariable String prodId) throws UserMsException
+	{
+		
+		//ProductDTO product = new RestTemplate().getForObject("http://localhost:8100/prodMs/getByName/"+prodName, ProductDTO.class);
+		try {
+		String msg = userServiceNew.removeFromCart(buyerId, prodId);
+		
+		return new ResponseEntity<>(msg,HttpStatus.OK);
+		}
+		catch(UserMsException e)
+		{
+			String msg = e.getMessage();
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND, msg, e);
+			
+		}
+	}
+	
 }

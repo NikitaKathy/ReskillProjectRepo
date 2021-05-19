@@ -224,4 +224,18 @@ public class UserServiceImpl implements UserService {
 		return li;
 	}
 
+	@Override
+	public String removeFromCart(String buyerId, String prodId) throws UserMsException {
+		// TODO Auto-generated method stub
+		
+		Cart cart = cartRepository.findByCustomPKBuyerIdAndCustomPKProdId(buyerId, prodId);
+		
+		if(cart==null)
+			throw new UserMsException("No Such Item In Cart");
+		
+		cartRepository.deleteByCustomPKBuyerIdAndCustomPKProdId(buyerId, prodId);
+		
+		return "The product was deleted successfully";
+	}
+
 }

@@ -27,4 +27,6 @@ public interface UserService {
 	
 	public List<CartDTO> getCartProducts(String id) throws UserMsException;
 	
+	public String removeFromCart(String buyerId, String prodId) throws UserMsException;
+	
 }
