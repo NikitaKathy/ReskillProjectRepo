@@ -1,10 +1,9 @@
 package com.oms.user.controller;
 
-import java.net.URI;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
@@ -38,6 +37,9 @@ public class UserAPI {
 	
 	@Autowired
 	Environment environment;
+	
+	@Value("${product.uri}")
+	String prodUri;
 	
 	@PostMapping(value = "/userMS/buyer/register")
 	public ResponseEntity<String> registerBuyer(@RequestBody BuyerDTO buyerDto){
@@ -115,11 +117,11 @@ public class UserAPI {
 	public ResponseEntity<String> addProductToWishlist(@PathVariable String buyerId, @PathVariable String prodId) throws UserMsException
 	{
 		try {
-		List<ServiceInstance> instances=client.getInstances("PRODUCTMS");
-		ServiceInstance instance=instances.get(0);
-		URI productUri = instance.getUri();
+//		List<ServiceInstance> instances=client.getInstances("PRODUCTMS");
+//		ServiceInstance instance=instances.get(0);
+//		URI productUri = instance.getUri();
 		
-		ProductDTO product = new RestTemplate().getForObject(productUri+"/prodMS/getById/"+prodId, ProductDTO.class);
+		ProductDTO product = new RestTemplate().getForObject(prodUri+"/prodMS/getById/"+prodId, ProductDTO.class);
 		
 		String msg = userServiceNew.wishlistService(product.getProdId(), buyerId);
 		
@@ -141,13 +143,13 @@ public class UserAPI {
 	public ResponseEntity<String> addProductToCart(@PathVariable String buyerId, @PathVariable String prodId, @PathVariable Integer quantity) throws UserMsException
 	{
 		try {
-		List<ServiceInstance> instances=client.getInstances("PRODUCTMS");
-		ServiceInstance instance=instances.get(0);
-		URI productUri = instance.getUri();
-		System.out.println(productUri);
+//		List<ServiceInstance> instances=client.getInstances("PRODUCTMS");
+//		ServiceInstance instance=instances.get(0);
+//		URI productUri = instance.getUri();
+//		System.out.println(productUri);
 		
 		 
-		ProductDTO product = new RestTemplate().getForObject(productUri+"/prodMS/getById/"+prodId, ProductDTO.class);
+		ProductDTO product = new RestTemplate().getForObject(prodUri+"/prodMS/getById/"+prodId, ProductDTO.class);
 		System.out.println(product);
 		System.out.println(product instanceof ProductDTO);
 		String msg = userServiceNew.cartService(product.getProdId(), buyerId, quantity);
