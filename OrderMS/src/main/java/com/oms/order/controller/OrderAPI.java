@@ -142,6 +142,25 @@ public class OrderAPI {
 		}		
 	}
 	
+	@PostMapping(value = "/orderMS/removeFromCart/{buyerId}/{prodId}")
+	public ResponseEntity<String> addToCart(@PathVariable String buyerId, @PathVariable String prodId){
+		
+		try {
+			
+			List<ServiceInstance> userInstances=client.getInstances("USERMS");
+			ServiceInstance userInstance=userInstances.get(0);
+			URI userUri = userInstance.getUri();
+			
+			String successMsg = new RestTemplate().postForObject(userUri+"/userMS/buyer/cart/remove/"+buyerId+"/"+prodId, null, String.class);
+
+			return new ResponseEntity<>(successMsg,HttpStatus.ACCEPTED);
+		}
+		catch(Exception e)
+		{
+			return new ResponseEntity<>(e.getMessage(),HttpStatus.UNAUTHORIZED);
+		}		
+	}
+	
 	
 
 }
