@@ -238,4 +238,20 @@ public class UserServiceImpl implements UserService {
 		return "The product was deleted successfully";
 	}
 
+	@Override
+	public String updateRewardPoint(String buyerId, Integer rewPoints) throws UserMsException {
+		// TODO Auto-generated method stub
+		
+		Buyer buyer = buyerRepository.findByBuyerId(buyerId);
+		
+		if(buyer==null)
+			throw new UserMsException("Buyer not found");
+		
+		buyer.setRewardPoints(rewPoints.toString());
+		
+		buyerRepository.save(buyer);
+		
+		return "Reward Points Updated for buyer Id : "+ buyer.getBuyerId();
+	}
+
 }
