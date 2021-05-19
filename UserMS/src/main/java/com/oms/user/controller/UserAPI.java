@@ -44,12 +44,12 @@ public class UserAPI {
 		
 		try {
 		String s ="Buyer registered successfully with buyer Id : " + userServiceNew.buyerRegistration(buyerDto);
-		return new ResponseEntity<String>(s,HttpStatus.OK);
+		return new ResponseEntity<>(s,HttpStatus.OK);
 		}
 		catch(UserMsException e)
 		{
 			String s = environment.getProperty(e.getMessage());
-			return new ResponseEntity<String>(s,HttpStatus.EXPECTATION_FAILED);
+			return new ResponseEntity<>(s,HttpStatus.EXPECTATION_FAILED);
 		}
 	}
 	
@@ -58,11 +58,11 @@ public class UserAPI {
 		
 		try {
 		String s ="Seller registered successfully with seller Id : "+ userServiceNew.sellerRegistration(sellerDto);
-		return new ResponseEntity<String>(s,HttpStatus.OK);
+		return new ResponseEntity<>(s,HttpStatus.OK);
 		}
 		catch(UserMsException e)
 		{
-			return new ResponseEntity<String>(environment.getProperty(e.getMessage()),HttpStatus.EXPECTATION_FAILED);
+			return new ResponseEntity<>(environment.getProperty(e.getMessage()),HttpStatus.EXPECTATION_FAILED);
 		}
 
 	}
@@ -72,11 +72,11 @@ public class UserAPI {
 	{
 		try {
 			String msg = userServiceNew.buyerLogin(email, password);
-			return new ResponseEntity<String>(msg,HttpStatus.OK);
+			return new ResponseEntity<>(msg,HttpStatus.OK);
 		}
 		catch(UserMsException e)
 		{
-			return new ResponseEntity<String>(e.getMessage(),HttpStatus.NOT_FOUND);
+			return new ResponseEntity<>(e.getMessage(),HttpStatus.NOT_FOUND);
 		}
 	}
 	
@@ -98,7 +98,7 @@ public class UserAPI {
 		
 		String msg = userServiceNew.deleteBuyer(id);
 		
-		return new ResponseEntity<String>(msg,HttpStatus.OK);
+		return new ResponseEntity<>(msg,HttpStatus.OK);
 		
 		
 	}
@@ -108,26 +108,39 @@ public class UserAPI {
 		
 		String msg = userServiceNew.deleteSeller(id);
 		
-		return new ResponseEntity<String>(msg,HttpStatus.OK);
+		return new ResponseEntity<>(msg,HttpStatus.OK);
 	}
 	
-	@PostMapping(value = "/userMS/buyer/wishlist/add/{buyerId}/{prodName}")
-	public ResponseEntity<String> addProductToWishlist(@PathVariable String buyerId, @PathVariable String prodName)
+	@PostMapping(value = "/userMS/buyer/wishlist/add/{buyerId}/{prodId}")
+	public ResponseEntity<String> addProductToWishlist(@PathVariable String buyerId, @PathVariable String prodId) throws UserMsException
 	{
+		try {
 		List<ServiceInstance> instances=client.getInstances("PRODUCTMS");
 		ServiceInstance instance=instances.get(0);
 		URI productUri = instance.getUri();
 		
-		ProductDTO product = new RestTemplate().getForObject(productUri+"/prodMs/getByName/"+prodName, ProductDTO.class);
+		ProductDTO product = new RestTemplate().getForObject(productUri+"/prodMS/getById/"+prodId, ProductDTO.class);
 		
 		String msg = userServiceNew.wishlistService(product.getProdId(), buyerId);
 		
-		return new ResponseEntity<String>(msg,HttpStatus.ACCEPTED);
+		return new ResponseEntity<>(msg,HttpStatus.ACCEPTED);
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+			String newMsg = "There was some error";
+			if(e.getMessage().equals("404 null"))
+			{
+				newMsg = "There are no PRODUCTS for the given product name";
+			}
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND,newMsg,e);
+		}
 	}
 	
 	@PostMapping(value = "/userMS/buyer/cart/add/{buyerId}/{prodName}/{quantity}")
-	public ResponseEntity<String> addProductToCart(@PathVariable String buyerId, @PathVariable String prodName, @PathVariable Integer quantity)
+	public ResponseEntity<String> addProductToCart(@PathVariable String buyerId, @PathVariable String prodName, @PathVariable Integer quantity) throws UserMsException
 	{
+		try {
 		List<ServiceInstance> instances=client.getInstances("PRODUCTMS");
 		ServiceInstance instance=instances.get(0);
 		URI productUri = instance.getUri();
@@ -139,7 +152,17 @@ public class UserAPI {
 		System.out.println(product instanceof ProductDTO);
 		String msg = userServiceNew.cartService(product.getProdId(), buyerId, quantity);
 		
-		return new ResponseEntity<String>(msg,HttpStatus.ACCEPTED);
+		return new ResponseEntity<>(msg,HttpStatus.ACCEPTED);
+		}
+		catch(Exception e)
+		{
+			String newMsg = "There was some error";
+			if(e.getMessage().equals("404 null"))
+			{
+				newMsg = "There are no PRODUCTS for the given product name";
+			}
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND,newMsg,e);
+		}
 	}
 	
 	
@@ -151,7 +174,7 @@ public class UserAPI {
 		try {
 		List<CartDTO> list = userServiceNew.getCartProducts(buyerId);
 		
-		return new ResponseEntity<List<CartDTO>>(list,HttpStatus.ACCEPTED);
+		return new ResponseEntity<>(list,HttpStatus.ACCEPTED);
 		}
 		catch(UserMsException e)
 		{
