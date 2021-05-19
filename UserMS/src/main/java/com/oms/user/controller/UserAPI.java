@@ -185,7 +185,7 @@ public class UserAPI {
 		}
 	}
 	
-	@GetMapping(value = "/userMS/buyer/cart/remove/{buyerId}/{prodId}")
+	@PostMapping(value = "/userMS/buyer/cart/remove/{buyerId}/{prodId}")
 	public ResponseEntity<String> removeFromCart(@PathVariable String buyerId,@PathVariable String prodId) throws UserMsException
 	{
 		
