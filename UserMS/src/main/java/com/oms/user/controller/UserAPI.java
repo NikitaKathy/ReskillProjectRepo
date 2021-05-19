@@ -203,4 +203,18 @@ public class UserAPI {
 		}
 	}
 	
+	@GetMapping(value = "/userMS/updateRewardPoints/{buyerId}/{rewPoints}")
+	public ResponseEntity<String> updateRewardPoints(@PathVariable String buyerId, @PathVariable Integer rewPoints)
+	{
+		try {
+			String msg = userServiceNew.updateRewardPoint(buyerId, rewPoints);
+			return new ResponseEntity<>(msg,HttpStatus.OK);
+		}
+		catch(Exception e)
+		{
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND,e.getMessage(),e);
+		}
+	}
+	
+	
 }

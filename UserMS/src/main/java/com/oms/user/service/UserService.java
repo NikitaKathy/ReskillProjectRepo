@@ -29,4 +29,6 @@ public interface UserService {
 	
 	public String removeFromCart(String buyerId, String prodId) throws UserMsException;
 	
+	public String updateRewardPoint(String buyerId, Integer rewPoints) throws UserMsException;
+	
 }
