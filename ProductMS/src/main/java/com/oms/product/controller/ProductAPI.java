@@ -31,11 +31,11 @@ public class ProductAPI {
 		
 		try {
 			String msg = productService.addProduct(prod);
-			return new ResponseEntity<String>(msg,HttpStatus.ACCEPTED);
+			return new ResponseEntity<>(msg,HttpStatus.ACCEPTED);
 		}
 		catch(Exception e)
 		{
-			return new ResponseEntity<String>(environment.getProperty(e.getMessage()),HttpStatus.UNAUTHORIZED);
+			return new ResponseEntity<>(environment.getProperty(e.getMessage()),HttpStatus.UNAUTHORIZED);
 		}
 		
 	}
@@ -46,7 +46,7 @@ public class ProductAPI {
 		System.out.println("Entered here");
 		try {
 			ProductDTO productDTO = productService.getProductByName(name);
-			return new ResponseEntity<ProductDTO>(productDTO,HttpStatus.OK);
+			return new ResponseEntity<>(productDTO,HttpStatus.OK);
 		}
 		catch(Exception e)
 		{
@@ -59,7 +59,7 @@ public class ProductAPI {
 	{
 		try {
 			ProductDTO productDTO = productService.getProductById(id);
-			return new ResponseEntity<ProductDTO>(productDTO,HttpStatus.OK);
+			return new ResponseEntity<>(productDTO,HttpStatus.OK);
 		}
 		catch(Exception e)
 		{
@@ -86,11 +86,11 @@ public class ProductAPI {
 		
 		try {
 			String msg = productService.deleteProduct(id);
-			return new ResponseEntity<String>(msg,HttpStatus.OK);
+			return new ResponseEntity<>(msg,HttpStatus.OK);
 		}
 		catch(Exception e)
 		{
-			return new ResponseEntity<String>(environment.getProperty(e.getMessage()),HttpStatus.NOT_FOUND);
+			return new ResponseEntity<>(environment.getProperty(e.getMessage()),HttpStatus.NOT_FOUND);
 		}
 	}
 	
