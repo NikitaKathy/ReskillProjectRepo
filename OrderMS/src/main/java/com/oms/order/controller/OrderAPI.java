@@ -21,6 +21,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.oms.order.dto.CartDTO;
 import com.oms.order.dto.OrderDTO;
+import com.oms.order.dto.OrderPlacedDTO;
 import com.oms.order.dto.ProductDTO;
 import com.oms.order.service.OrderService;
 
@@ -58,14 +59,15 @@ public class OrderAPI {
 				productList.add(prod);
 			});
 			
-			String orderId = orderService.placeOrder(productList,cartList,order);
+			OrderPlacedDTO orderPlaced = orderService.placeOrder(productList,cartList,order);
 			cartList.forEach(item->{
 				new RestTemplate().getForObject(productUri+"/prodMS/updateStock/" +item.getProdId()+"/"+item.getQuantity(), boolean.class) ;
 				new RestTemplate().postForObject(userUri+"/userMS/buyer/cart/remove/"+buyerId+"/"+item.getProdId(),null, String.class);
 			});			
 			
+			new RestTemplate().getForObject(userUri+"/userMS/updateRewardPoints/"+buyerId+"/"+orderPlaced.getRewardPoints() , String.class);
 			
-			return new ResponseEntity<>(orderId,HttpStatus.ACCEPTED);
+			return new ResponseEntity<>(orderPlaced.getOrderId(),HttpStatus.ACCEPTED);
 		}
 		catch(Exception e)
 		{

@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.oms.order.dto.CartDTO;
 import com.oms.order.dto.OrderDTO;
+import com.oms.order.dto.OrderPlacedDTO;
 import com.oms.order.dto.ProductDTO;
 import com.oms.order.entity.Order;
 import com.oms.order.entity.ProductsOrdered;
@@ -56,7 +57,7 @@ public class OrderServiceImpl implements OrderService {
 	}
 
 	@Override
-	public String placeOrder(List<ProductDTO> productList, List<CartDTO> cartList, OrderDTO orderDTO)
+	public OrderPlacedDTO placeOrder(List<ProductDTO> productList, List<CartDTO> cartList, OrderDTO orderDTO)
 			throws OrderMsException {
 		Order order = new Order();
 		OrderValidator.validateOrder(orderDTO);
@@ -80,8 +81,14 @@ public class OrderServiceImpl implements OrderService {
 		}		
 		prodOrderedRepository.saveAll(productsOrdered);
 		orderRepository.save(order);
+		OrderPlacedDTO orderPlaced = new OrderPlacedDTO();
+		orderPlaced.setBuyerId(order.getBuyerId());
+		orderPlaced.setOrderId(order.getOrderId());
+		Integer rewardPts = (int) (order.getAmount()/100);		
+		orderPlaced.setRewardPoints(rewardPts);
 		
-		return order.getOrderId();
+		
+		return orderPlaced;
 	}
 
 	@Override
