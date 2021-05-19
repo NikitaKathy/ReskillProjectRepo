@@ -17,4 +17,6 @@ public interface ProductService {
 	
 	public ProductDTO getProductById(String id) throws ProductMsException;
 
+	public Boolean updateStockOfProd(String prodId, Integer quantity) throws ProductMsException;
+
 }

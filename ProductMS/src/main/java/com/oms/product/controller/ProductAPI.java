@@ -93,5 +93,17 @@ public class ProductAPI {
 			return new ResponseEntity<String>(environment.getProperty(e.getMessage()),HttpStatus.NOT_FOUND);
 		}
 	}
+	
+	@GetMapping(value = "/prodMS/updateStock/{prodId}/{quantity}")
+	public ResponseEntity<Boolean> updateStock(@PathVariable String prodId, @PathVariable Integer quantity){		
+		try {
+			Boolean status = productService.updateStockOfProd(prodId,quantity);
+			return new ResponseEntity<>(status,HttpStatus.ACCEPTED);
+		}
+		catch(Exception e)
+		{
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND,environment.getProperty(e.getMessage()), e);
+		}		
+	}
 
 }

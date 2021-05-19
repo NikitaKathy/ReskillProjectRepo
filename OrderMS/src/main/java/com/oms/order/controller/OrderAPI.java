@@ -59,6 +59,10 @@ public class OrderAPI {
 			});
 			
 			String orderId = orderService.placeOrder(productList,cartList,order);
+			cartList.forEach(item->{
+				new RestTemplate().getForObject(productUri+"/prodMS/updateStock/" +item.getProdId()+"/"+item.getQuantity(), boolean.class) ;
+			});					
+			
 			return new ResponseEntity<>(orderId,HttpStatus.ACCEPTED);
 		}
 		catch(Exception e)
@@ -117,8 +121,9 @@ public class OrderAPI {
 		{
 			return new ResponseEntity<>(e.getMessage(),HttpStatus.UNAUTHORIZED);
 		}		
-		
 	}
+	
+	
 	
 
 }

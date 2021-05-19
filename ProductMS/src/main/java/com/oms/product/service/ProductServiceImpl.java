@@ -2,6 +2,7 @@ package com.oms.product.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -147,6 +148,17 @@ public class ProductServiceImpl implements ProductService {
 		}
 		
 		return li;
+	}
+
+	@Override
+	public Boolean updateStockOfProd(String prodId, Integer quantity) throws ProductMsException {
+		Optional<Product> optProduct = productRepository.findById(prodId);
+		Product product = optProduct.orElseThrow(()-> new ProductMsException("Product does not exist"));
+		if(product.getStock()>=quantity) {
+			product.setStock(product.getStock()-quantity);
+			return true;
+		}
+		return false;		
 	}
 
 }
